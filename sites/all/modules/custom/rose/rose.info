@@ -1,0 +1,8 @@
+name = Rose Nichols custom module
+description = All the custom stuff on this awesome website
+core = 7.x
+
+files[] = rose.blocks.inc
+files[] = rose.form.inc
+files[] = rose.contact.inc
+files[] = rose.module

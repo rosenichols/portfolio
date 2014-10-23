@@ -1,0 +1,212 @@
+/* Header */
+
+#region-header {
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
+	@include respond(mobile) {
+		padding-bottom: 0;
+	}
+	@include respond(mobile, tablet) {
+		margin: 0;
+		text-align: center;
+	}
+}
+
+#block-rose-logo {
+	font-family: 'SilkenThread';
+	color: #fff;
+	position: absolute;
+	top: 0;
+	@include respond(tablet) {
+		position: static;
+	}
+	span {
+		display: block;
+	}
+	a {
+		color: #fff;
+		font-size: 42px;
+		line-height: 97px;
+		display: block;
+		padding-top: 5px;
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+	}
+	@include respond(mobile) {
+		float: none;
+		position: static;
+	}
+}
+
+#menu-toggle {
+	text-transform: lowercase;
+	font-family: carrois_gothic_sc;
+	color: white;
+	border: 1px solid #eff3de;
+	padding: 0.25em 1.5em 0.333em 1.5em;
+	@include inline-block;
+	line-height: 1em;
+	background: none;
+	font-weight: 400;
+	outline: none;
+	margin: 0 auto 20px auto;
+	@include border-radius(0);
+	@include text-shadow(none);
+	font-size: 1em;
+	min-width: 100px;
+	display: none;
+	&.open {
+		background: #94A749;
+	}
+	@include respond(mobile) {
+		display: block;
+	}
+}
+
+.front {
+	#block-rose-logo {
+		text-align: center;
+		font-size: 80px;
+		position: static;
+		float: none;
+		margin: 0 auto;
+		a {
+			font-size: 90px;
+			line-height: 180px;
+			@include respond(mobile) {
+				font-size: 48px;
+				line-height: 100px;
+			}
+		}
+	}
+}
+
+#zone-header-wrapper {
+	background: #839441;
+	border-bottom: 10px solid #eff3de;
+}
+
+
+/* Menus */
+
+#block-rose-main-menu {
+	float: right;
+	@include respond(mobile, tablet) {
+		float: none;
+		width: 100%;
+	}
+	ul.menu {
+		padding: 0;
+		margin: 0;
+		display: none;
+		@include respond(tablet, desktop, wide) {
+			text-align: center;
+			display: block;
+		}
+	}
+	li {
+		font-family: $carrois-sc;
+		font-size: 1.222em;
+		display: block;
+		float: left;
+		padding: 0;
+		line-height: 35px;
+		margin: 0;
+		margin: {
+			left: 1.25em;
+			right: 0;
+		}
+		&.first {
+			margin-left: 0;
+		}
+		@include respond(tablet) {
+			float: none;
+			display: inline;
+		}
+		@include respond(mobile) {
+			width: 100%;
+			background: #94A749;
+			float: none;
+			margin: 0;
+			border-top: 1px solid #eff3de;
+			text-align: center;
+		}
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 0;
+			text-transform: lowercase;
+			color: #ffffff;
+			padding: 0.278em;
+			@include respond(tablet, desktop) {
+				@include inline-block;
+			}
+			&.active,
+			&.active-trail {
+				background: url('../images/active-arrows.png') center 39px no-repeat;
+				@include respond(mobile) {
+					background: none;
+				}
+			}
+		}
+	}
+}
+
+.front {
+	#block-rose-main-menu {
+		float: none;
+		ul.menu {
+			float: none;
+			text-align: center;
+		}
+		li {
+			float: none;
+			display: inline;
+			@include respond(mobile) {
+				display: block;
+			}
+		}
+		a {
+			padding: 0.278em 1em;
+			@include inline-block;
+		}
+	}
+}
+
+
+#block-rose-sub-menu {
+	ul {
+		margin-top: 6px;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+		display: block;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 15px;
+		a {
+			text-decoration: none;
+			font-family: Carrois Gothic SC;
+			font-size: 17px;
+			line-height: 1em;
+			text-transform: lowercase;
+			display: block;
+			padding: 6px 8px;
+			background: #f5f5f5;
+			color: $dk-grey;
+			border-bottom: 2px solid #88c6de;
+			@include transition-property(border-bottom);
+			@include transition-duration(.25s);
+			@include transition-timing-function(ease-in);
+			&:hover {
+				border-bottom: 2px solid #afc280;
+			}
+			&.active {
+				border-color: darken(#88c6de, 30%);
+			}
+		}
+	}
+}

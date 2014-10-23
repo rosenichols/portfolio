@@ -1,0 +1,7 @@
+name = Taxonomy Extras
+description = "Taxonomy Extras"
+core = 7.x
+dependencies[] = weight
+dependencies[] = taxonomy
+dependencies[] = views
+dependencies[] = ctools

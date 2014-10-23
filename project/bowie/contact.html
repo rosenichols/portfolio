@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+function validate_required(field,alerttxt)
+{
+with (field)
+{
+if (value==null||value=="")
+  {alert(alerttxt);return false;}
+else {return true}
+}
+}
+
+function validate_form(thisform)
+{
+with (thisform)
+{
+
+<!-- Field validation - check title has been entered --> 
+if (validate_required(firstname,"Please enter your first name!")==false)
+  {firstname.focus();return false;};
+	
+if (validate_required(surname,"Please enter your surname!")==false)
+  {surname.focus();return false;};
+  
+}
+}
+
+function validate_email(field,alerttxt)
+{
+with (field)
+  {
+  apos=value.indexOf("@");
+  dotpos=value.lastIndexOf(".");
+  if (apos<1||dotpos-apos<2)
+    {alert(alerttxt);return false;}
+  else {return true;}
+  }
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Contact - David Bowie Fan Site</title>
+<link rel="stylesheet" type="text/css" href="bowie.css" />
+
+<style type="text/css">
+
+table.form{
+	font: 12px lucida grande, sans-serif;
+	margin-left:auto; margin-right:auto;
+	border: 0px solid #999;
+	margin-top:10px;
+}
+	
+td.form{
+	border: 1px solid #d7d7d7; padding:4px; /*ccc*/
+}
+
+div.formbuttons {
+	width:180px; border: 0px solid; margin-left:auto; margin-right:auto;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="bowieimage">
+
+<div class="maincontent">
+
+
+<p class="contact">Thank you for visiting this fan site. Please rate your experience using the following questionnaire.</p>
+<form action="FormMail.php" onsubmit="return validate_form(this);" method="post">
+<table class="form" cellspacing="8">
+<tr>
+<td class="form">First name</td>
+<td class="form"><input type="text" name="firstname" size="22" /></td>
+<td class="form">Surname</td>
+<td class="form"><input type="text" name="surname" size="22" /></td>
+</tr>
+<tr>
+<td class="form">Gender</td>
+<td class="form" colspan="3"><input type="radio" name="gender" value="Male">Male <input type="radio" name="gender" value="Female">Female</td>
+</tr>
+<tr>
+<td class="form">Overall rating</td>
+<td class="form" colspan="3">
+	<!--	<select name="age"> 
+				<option value="upto18">Up to 18</option> 
+				<option value="18-24">18-24</option> 
+				<option value="other">other tutorial</option> 
+		</select>-->
+    <input type="radio" name="overall" value="1" />1 (terrible)
+    <input type="radio" name="overall" value="2" />2 
+    <input type="radio" name="overall" value="3" />3 
+    <input type="radio" name="overall" value="4" />4 
+    <input type="radio" name="overall" value="5" />5
+    <input type="radio" name="overall" value="6" />6
+    <input type="radio" name="overall" value="7" />7 
+    <input type="radio" name="overall" value="8" />8 
+    <input type="radio" name="overall" value="9" />9
+    <input type="radio" name="overall" value="10" />10 (great)
+    </td>
+</tr>
+<tr>
+<td class="form">Did you like?</td>
+<td class="form" colspan="3"><input type="checkbox" name="news" value="News" /> Home page
+<input type="checkbox" name="events" value="events" /> Albums page
+<input type="checkbox" name="confs" value="confs" />Lyrics pages</td>
+</tr>
+<tr>
+<td class="form">Needs more info?</td>
+<td class="form" colspan="3"><select name="moreinfo"> 
+				<option value="pleaseselect">Please select an option</option>
+				<option value="discography">Discography</option> 
+				<option value="lifework">Life's work</option> 
+				<option value="biography">Biography</option> 
+		</select></td>
+</tr>
+<tr>
+<td class="form">Other Comments<br />(optional)</td>
+<td class="form" colspan="3"><textarea name="comments" rows="4" cols="40"></textarea></td>
+</tr></table>
+
+<div class="formbuttons"><input type="reset" /> &nbsp;&nbsp;<input type="submit" /></div></form>
+
+</div>
+
+<div id="navtabs">
+	<div class="navhome"><a href="index.html"></a></div>
+	<div class="navalbums"><a href="albums.html"></a></div>
+	<div class="navlyrics"><a href="lyrics.html"></a></div>
+  <div class="navcontact"><a href="contact.html"></a></div>
+</div>
+
+<div class="bowiehead"><img src="images/bowiehead.png" alt="" /></div>
+</div>
+
+<hr />
+<div class="footer"><span class="footer">&copy; Rose Nichols 09019365</span> <a href="http://validator.w3.org/check?uri=referer"><img src="images/valid-xhtml10.gif" alt="XHTML 1.0 Valid" class="validxhtml"/></a> 
+<a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.rosenichols.co.uk/portfolio/bowie/bowie.css">
+<img src="images/valid-css.gif" alt="Valid CSS" class="validcss" /></a></div>
+</body>
+</html>

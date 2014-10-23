@@ -1,0 +1,143 @@
+/* Home */
+
+#block-rose-homepage-intro {
+	line-height: 38px;
+	padding: {
+		top: 20px;
+		bottom: 10px;
+	}
+}
+
+#block-rose-tools-trade {
+	margin-bottom: 3em;
+	h2 {
+		font-family: $josefin;
+		font-size: 2.389em;
+		text-align: center;
+	}
+	.content {
+		position: relative;
+		min-height: 420px;
+		overflow: hidden;
+		@include respond(tablet) {
+			min-height: 570px;
+		}		
+	}
+	.tools-trade {
+		position: absolute;
+		@include transition-property(all);
+	  @include transition-duration(.5s);
+	  @include transition-timing-function(ease-in);
+	  @include respond(mobile) {
+	  	position: static;
+	  	margin-bottom: 2em;
+	  }
+	}
+	.macbook {
+		background: url('../images/macbook-pro.png') 0 0 no-repeat;
+		height: 215px;
+		width: 356px;
+		top: 130px;
+		left: 0;
+		@include respond(tablet) {
+			top: 120px;
+		}
+		@include respond(mobile) {
+			width: 100%;
+			background-position: top center;
+		}
+	}
+	.sass {
+		background: url('../images/sass.png') 0 0 no-repeat;
+		height: 213px;
+		width: 284px;
+		top: 0px;
+		left: 300px;
+		@include respond(desktop) {
+			left: 270px;
+		}
+		@include respond(tablet) {
+			left: 230px;
+		}
+		@include respond(mobile) {
+			width: 100%;
+			background-position: top center;
+		}
+	}
+	.drupal {
+		background: url('../images/drupal.png') 0 0 no-repeat;
+		height: 166px;
+		width: 149px;
+		top: 230px;
+		left: 440px;
+		@include respond(desktop) {
+			top: 250px;
+			left: 400px;
+		}
+		@include respond(tablet) {
+			left: auto;
+			top: 220px;
+			right: 160px;
+		}
+		@include respond(mobile) {
+			width: 100%;
+			background-position: top center;
+		}
+	}
+	.photoshop {
+		background: url('../images/photoshop.png') 0 0 no-repeat;
+		height: 91px;
+		width: 113px;
+		top: 110px;
+		right: 330px;
+		@include respond(desktop) {
+			right: 220px;
+		}
+		@include respond(tablet) {
+			top: 270px;
+			right: 0px;
+		}
+		@include respond(mobile) {
+			width: 100%;
+			background-position: top center;
+		}
+	}
+	.graphics-tablet {
+		background: url('../images/graphics-tablet.png') 0 0 no-repeat;
+		width: 363px;
+		height: 168px;
+		right: 160px;
+		top: 250px;
+		@include respond(desktop) {
+			right: 0px;
+		}
+		@include respond(tablet) {
+			right: 80px;
+			top: 400px;
+		}
+		@include respond(mobile) {
+			width: 100%;
+			background-position: top center;
+		}
+	}
+	.sublime-text {
+		background: url('../images/sublime-text.png') 0 0 no-repeat;
+		width: 163px;
+		height: 145px;
+		top: 70px;
+		right: 0px;
+		@include respond(mobile) {
+			width: 100%;
+			background-position: top center;
+		}
+	}
+}
+
+.front {
+	#zone-content {
+		padding-bottom: 1.778em;
+	}
+	.field-name-body p:last-of-type {
+		margin-bottom: 0;
+	}
+}

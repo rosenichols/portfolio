@@ -1,0 +1,136 @@
+/* blocks */
+
+#i-read,
+#i-talk,
+#i-listen {
+	width: 31.66%;
+	margin-right: 2.5%;
+	//border: 1px solid #d0d0d0;
+	color: #444444;
+	padding-bottom: 2em;
+	@include inline-block;
+	float: left;
+	vertical-align: top;
+	font-size: 0.889em;
+	line-height: 1.5em;
+	@include respond(mobile) {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 2em;
+		border: 1px solid;
+		padding-bottom: 0;
+	}
+	.block-title {
+		color: #606060;
+		//background: #ebe5ec;
+		background: rgba(0,0,0, 0.1);
+		font-size: 1.688em;
+		padding: 0.75em;
+		//text-align: center;
+		font-family: $carrois-sc;
+		margin: 0;
+		text-transform: lowercase;
+	}
+	.content {
+		padding: 1.25em;
+		position: relative;
+	}
+	.footer {
+		font-family: $carrois-sc;
+		//background: #eff3de;
+		background: rgba(0, 0 ,0, 0.2);
+		text-transform: lowercase;
+		position: absolute;
+		bottom: 0;
+		text-align: right;
+		color: #666666;
+		width: 31.66%;
+		@include respond(mobile) {
+			width: 100%;
+			position: static;
+		}
+		a {
+			color: #666666;
+			display: block;
+			padding: 0.556em;
+			&:hover,
+			&:focus {
+				color: #d0d0d0;
+			}
+		}
+	}
+}
+
+#i-talk {
+	a {
+		@include transition-property(color);
+		@include transition-duration(.25s);
+		@include transition-timing-function(ease-in);
+		&:hover,
+		&:focus {
+			color: $lt-green;
+		}
+	}
+	li {
+		margin: 0;
+		padding: 0;
+		margin-bottom: 1.5em;
+	}
+	.views-field-text {
+		color: #d0d0d0;
+	}
+	.views-field-created-time {
+		display: block;
+		span {
+			color: #898989;
+			font-weight: normal;
+			em {
+				font-style: normal;
+			}
+		}
+	}
+}
+
+#i-read {
+	a {
+		text-decoration: none;
+		color: #d0d0d0;
+	}
+	.read {
+		margin-bottom: 1.5em;
+	}
+	span {
+		display: block;
+		&.notes {
+			color: #898989;
+		}
+	}
+}
+
+#i-listen {
+	margin-right: 0;
+	@include respond(mobile) {
+		margin-bottom: 0;
+	}
+	.latest-listen {
+		padding-left: 84px;
+		min-height: 64px;
+		margin-bottom: 1.5em;
+		a {
+			position: absolute;
+			left: 1.25em;
+		}
+		img {
+			border: 1px solid #898989;
+		}
+	}
+	span {
+		display: block;
+		&.artist {
+			color: #898989;
+		}
+		&.name {
+			color: #d0d0d0;
+		}
+	}
+}

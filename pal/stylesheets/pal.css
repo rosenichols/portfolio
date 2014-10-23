@@ -1,0 +1,571 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	font-size: 16px;
+}
+
+body {
+	margin-top: 40px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	color: #464646;
+}
+
+#announcements {
+	border: 1px solid #e1e1e1;
+	background-color: #f7fafa;
+	padding: 6px 20px;
+	margin: 20px 0 30px 0;
+}
+
+p.announcements {
+	display: inline;
+	padding-right: 30px;
+}
+
+p.announcementslast {
+	display: inline;
+}
+
+.date {
+	font-weight: bold;
+	color: #05677F;
+}
+
+#headerwrapper {
+	height: 148px;
+	width: 900px;
+	margin: 0 auto;
+}
+
+#header {
+	height: 138px;
+	width: 570px;
+	float: left;
+	margin-top: 4px;
+}
+
+#sessiontimes {
+	height: 148px;
+	width: 274px;
+	margin-left: 50px;
+	float: left;
+}
+
+#navwrapper {
+	width: 900px;
+	margin: 20px auto 28px auto;
+}
+
+#navcontent {
+	width: 890px;
+	height: 26px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 6px;
+	padding-left: 18px;
+}
+
+div.dividerline {
+	width: 898px;
+	height: 2px;
+	background-color: #f7fafa;
+	border: 1px solid #e1e1e1; /* do not remove */
+	margin: 2px auto 2px auto;
+	clear: both;
+}
+
+#content {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#footer {
+	width: 900px;
+	margin: 50px auto 0 auto;
+}
+
+#sidenav {
+	width: 128px;
+	background-color: #f7fafa;
+	height: 100%;
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	border: 1px solid #ebebeb;
+}
+
+#weekscontent {
+	float: right;
+	width: 748px;
+}
+
+#weekswrapper {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#introwrapper {
+	width: 900px;
+	height: 13em; /* 219px */
+	margin-bottom: 10px;
+	border: 1px solid #fff;
+}
+
+#rosepic {
+	width: 219px;
+	height: 219px;
+	padding-right: 20px;
+	float: left;
+	margin-top: -14px;
+}
+
+#intro { /* paragraph */
+	font: 20px 'Courier New', Courier, monospace;
+	line-height: 32px;
+	margin-top: 22px;
+	height: auto;
+}
+
+#aside {
+	font: 16px 'Courier New', Courier, monospace;
+	height: auto;
+	line-height: 24px;
+}
+
+.clearline {
+	width: 100%;
+	clear: both;
+}
+
+#boxmodel { /* image */
+	display: block;
+	margin: 20px auto 30px auto;
+}
+
+span.bold {
+	font-weight: bold;
+}
+
+
+div.sectionL {
+	margin-top: 2em;
+	width: 420px;
+	float: left;
+}
+
+div.sectionR {
+	margin-top: 2em;
+	width: 420px;
+	float: right;
+}
+
+ul.nextyear {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+li {
+	font: 12px Helvetica, 'Trebuchet MS', sans-serif;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	line-height: 24px;
+	list-style-type: square;
+}
+
+p {
+	font: 0.75em Helvetica, 'Trebuchet MS', sans-serif;
+	line-height: 2em;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+p.troubleshooting {
+	width: 80%;
+	padding-left: 5%;
+	font: 0.75em Helvetica, 'Trebuchet MS', sans-serif;
+	line-height: 2em;
+}
+
+p.code {
+	width: 80%;
+	padding-left: 5%;
+	font: 0.875em 'Courier New', monospace;
+	line-height: 1.5em;
+}
+
+#copyright {
+	padding-top: 2px;
+	font: 0.688em Verdana, sans-serif;
+	text-align: center;
+}
+
+.center {
+	margin: 0 auto;
+	display: block;
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - For Code Extracts - - - - - - - - - - - - - - - */
+
+
+#linenumbers {
+	float: left;
+	width: 20px;
+	position: relative;
+	left: 24px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#code {
+	float: left;
+	width: 878px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+/* - - - - - - - - - - - - - - - Concept Examples - - - - - - - - - - - - - - - */
+
+#w3example a:link
+{
+display:inline;
+font-weight:bold;
+color:#FFFFFF;
+background-color:#98bf21;
+width:120px;
+text-align:center;
+padding:4px;
+text-decoration:none;
+}
+#w3example a:hover {
+background-color:#7A991A;
+}
+
+#w3example {
+	margin: 10px auto;
+	width: 290px;
+}
+
+#w3example2 {
+	margin: 10px auto;
+	width: 520px;
+}
+
+#w3example2 ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+#w3example2 li {
+	list-style-type: none;
+	float:left;
+}
+
+#w3example2 a:link {
+	display:block;
+	width:120px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#98bf21;
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+#w3example2 a:hover
+{
+	background-color:#7A991A;
+}
+
+#navexample {
+	float: right;
+	vertical-align: top;
+	margin: 14px 0 10px 10px;
+}
+
+#wholenavigation {
+	width: 794px;
+	height: 100;
+	margin: 0 auto;
+}
+
+/* - - - - - - - - - - - - - - - Headers - - - - - - - - - - - - - - - */
+
+h1 {
+	font: 1.5em 'Courier New', Courier, monospace;
+	color: #05677f;
+	text-align: center;
+	margin-top: 30px;
+}
+
+h1.first {
+	margin-top: -2px;
+}
+
+h2 {
+	margin: 30px auto 0 auto;
+	font: 1.25em 'Courier New', Courier, monospace;
+	color: #05677f;
+	text-align: center;
+}
+
+h2.semester1 {
+	margin-top: 50px;
+}
+
+h3 {
+	margin: 40px auto 0 auto;
+	font: 1em 'Courier New', Courier, monospace;
+	color: #CD6800;
+	text-align: left;
+}
+
+.headerimg {
+	margin: 30px 0 0px 0;
+}
+
+
+/* - - - - - - - - - - - - - Sessions Page Styles - - - - - - - - - - - - - */
+
+#palsessions { /* table */
+	width: 100%;
+	font: 0.75em Helvetica, 'Trebuchet MS', sans-serif;
+	text-align: center;
+	margin-top: 20px;
+}
+
+th {
+	font-weight: bold;
+	padding: 8px 6px 8px 6px;
+}
+
+th.col1width {
+	width: 15%;
+}
+
+th.col2width {
+	width: 25%;
+}
+
+tr.header {
+	background-color: #e8f4f7;
+}
+
+tr.sessions {
+	background-color: #f7fafa;
+}
+
+tr.even {
+	background-color: #eff7f8;
+}
+
+td.sessions {
+	padding: 8px 6px 8px 6px;
+}
+
+img.centerimage {
+	display: block;
+	margin: 30px auto 0 auto;
+}
+
+.caption {
+	font: 0.75em Helvetica, 'Trebuchet MS', sans-serif;
+	line-height: 1em;
+	margin-top: 4px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+
+/* - - - - - - - - - - - - - - General Link Styles - - - - - - - - - - - - - - */
+
+a:link {
+	color: #05677f;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #05677f;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #cd8f02;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.conceptlinks {
+	font-size: 14px;
+}
+
+a img {
+	border: none;
+}
+
+
+
+/* - - - - - - - - - - - - - - Contact FORM - - - - - - - - - - - - - - */
+
+
+#formlabels {
+	width: 120px;
+	float: left;
+}
+
+#forminputs {
+	width: 306px;
+	float: left;
+	margin-bottom: 40px;
+}
+
+#formbuttons {
+	width: 140px;
+	margin-top: 2px auto;
+}
+
+#name, #email {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+div.spacing {
+	margin-top: 2px;
+	margin-bottom: -10px;
+}
+
+input {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#contactform {
+	width: 460px;
+	margin: 0 auto;
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - 404 Error Page - - - - - - - - - - - - - */
+
+
+#errorpage { /* div error 404 page */
+	margin: 10px auto 0 auto;
+	background: url('../images/404pal.png') no-repeat left top;
+	width: 720px;
+	height: 509px;
+}
+
+#errortext {
+	float: right;
+	display: inline;
+	width: 420px;
+	margin-top: 156px;
+}
+
+#errortext p {
+	font: 16px 'Courier New', Courier, monospace;
+	text-align: center;
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - Set Link Active States - - - - - - - - - - - - - */
+
+#home #navhome a,
+#whatispal #navwhatispal a,
+#sessions #navpalsessions a,
+#concepts #navkeyconcepts a,
+#contact #navcontact a {
+	background-position: left bottom;
+}
+
+
+
+/* - - - - - - - - - - - - - Set Link Hover States - - - - - - - - - - - - - */
+
+
+#navhome a:hover,
+#navwhatispal a:hover,
+#navpalsessions a:hover,
+#navkeyconcepts a:hover,
+#navcontact a:hover {
+	background-position: 0 -20px;
+}
+
+
+/* - - - - - - - - - - - - - - - MAIN NAVIGATION - - - - - - - - - - - - - - - */
+
+#navhome a {
+	float: left;
+	display: block;
+	padding: 0;
+	border: 0;
+	width: 60px; height: 20px;
+	overflow: hidden;
+	background: url('../images/navhome.png') left top no-repeat;
+	margin-left: 23px;
+	margin-right: 23px;
+}
+
+#navwhatispal a {
+	float: left;
+	display: block;
+	padding: 0;
+	border: 0;
+	width: 124px; height: 20px;
+	overflow: hidden;
+	background: url('../images/navwhatispal.png') left top no-repeat;
+	margin-left: 23px;
+	margin-right: 23px;
+}
+
+#navpalsessions a {
+	float: left;
+	display: block;
+	padding: 0;
+	border: 0;
+	width: 120px; height: 20px;
+	overflow: hidden;
+	background: url('../images/navpalsessions.png') left top no-repeat;
+	margin-left: 23px;
+	margin-right: 23px;
+}
+
+#navkeyconcepts a {
+	float: left;
+	display: block;
+	padding: 0;
+	border: 0;
+	width: 123px; height: 20px;
+	overflow: hidden;
+	background: url('../images/navkeyconcepts.png') left top no-repeat;
+	margin-left: 23px;
+	margin-right: 23px;
+}
+
+#navcontact a {
+	float: left;
+	display: block;
+	padding: 0;
+	border: 0;
+	width: 173px; height: 20px;
+	overflow: hidden;
+	background: url('../images/navcontact.png') left top no-repeat;
+	margin-left: 23px;
+	margin-right: 23px;
+}

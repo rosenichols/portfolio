@@ -1,0 +1,38 @@
+<Config>
+<title>London and Winchester Twin Towns</title>
+	<refresh>60</refresh>
+	<weather>
+	    <station>
+			<base>http://www.winchesterweather.org.uk/</base>
+			<tourist_link>http://www.visitwinchester.co.uk</tourist_link>
+			<wiki_link>http://en.wikipedia.org/wiki/Winchester</wiki_link>
+			<title>Winchester, UK</title>
+			<latitude>51.062939</latitude>
+			<longitude>-1.316503</longitude>
+		</station>
+		<station>
+			<base>http://www.weatherroanoke.com/wxst</base>
+			<tourist_link>http://www.visitwinchesterva.com</tourist_link>
+			<wiki_link>http://en.wikipedia.org/wiki/Winchester,_Virginia</wiki_link>
+			<title>Winchester, VA</title>
+			<latitude>39.185683</latitude>
+			<longitude>-78.163353</longitude>
+		</station>
+		<station>
+			<base>http://weather.yahoo.com/england/greater-london/hackney-24875637</base>
+			<tourist_link>http://www.visitlondon.com</tourist_link>
+			<wiki_link>http://en.wikipedia.org/wiki/Hackney_Central</wiki_link>
+			<title>Hackney, London</title>
+			<latitude>51.562478</latitude>
+			<longitude>-0.055458</longitude>
+		</station>
+		<station>
+			<base>http://www.massapequanyweather.com</base>
+			<tourist_link>http://www.discoverlongisland.com</tourist_link>
+			<wiki_link>http://en.wikipedia.org/wiki/Long_Island</wiki_link>
+			<title>Long Island, New York</title>
+			<latitude>40.439189</latitude>
+			<longitude>-73.773828</longitude>
+		</station>
+	</weather>
+</Config>

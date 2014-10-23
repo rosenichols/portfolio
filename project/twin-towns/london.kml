@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Twin Towns</name>
+      <description>
+        <![CDATA[
+          <h1>London UK</h1>
+          <p><img style="float:right;" src="http://www.martinfrancis.org/dsa1/images/winchester_cathedral_thumb.jpg" />
+		  <font color="red">can put any html <i>here</i> or images or even news feeds 
+          <b>news feeds</b> here.</font></p>
+        ]]>
+      </description>
+      <Point>
+        <coordinates>-0.126244,51.500144,0</coordinates>
+      </Point>
+    </Placemark>
+	<Placemark>
+      <name>Twin Towns</name>
+      <description>
+        <![CDATA[
+          <h1>New York USA</h1>
+          <p><font color="red">can put any html <i>here</i> or images or even news feeds 
+          <b>news feeds</b> here.</font></p>
+        ]]>
+      </description>
+      <Point>
+        <coordinates>-74.006097,40.714414,0</coordinates>
+      </Point>
+    </Placemark>
+	<Placemark>
+      <name>Twin Towns</name>
+      <description>
+        <![CDATA[
+          <h1>Johannesburg, SA</h1>
+          <p><font color="red">can put any html <i>here</i> or images or even news feeds 
+          <b>news feeds</b> here.</font></p>
+        ]]>
+      </description>
+      <Point>
+        <coordinates>28.045556,-26.204442,0</coordinates>
+      </Point>
+    </Placemark>
+	<Placemark>
+      <name>Twin Towns</name>
+      <description>
+        <![CDATA[
+          <h1>Beijing, China</h1>
+          <p>
+		  <font color="red">can put any html <i>here</i> or images or even news feeds 
+          <b>news feeds</b> here.</font>
+		  
+		  </p>
+        ]]>
+      </description>
+      <Point>
+        <coordinates>116.407414,39.904214,0</coordinates>
+      </Point>
+    </Placemark>
+	
+	
+	
+	
+	
+  </Document>
+</kml>
+
+

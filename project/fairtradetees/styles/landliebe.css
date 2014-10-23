@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'LandliebeRegular';
+    src: url('../fonts/Landliebe-webfont.eot');
+    src: url('../fonts/Landliebe-webfont.eot?iefix') format('eot'),
+         url('../fonts/Landliebe-webfont.woff') format('woff'),
+         url('../fonts/Landliebe-webfont.ttf') format('truetype'),
+         url('../fonts/Landliebe-webfont.svg#webfontpa93Eey2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

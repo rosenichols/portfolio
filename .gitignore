@@ -1,0 +1,19 @@
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
+
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
+
+# Ignore Mac files
+.DS_Store
+
+# Temp
+sites/all/modules/custom/rose_gdrive
+
+# Ignore the dev enviroment files
+dev
+
+# Ignore anything even vaguely DB config related
+db_config.php
+db_config.inc.php

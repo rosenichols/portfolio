@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.cems.uwe.ac.uk/xmlwiki/ER/model.xsd" name="International Missing Children" quote-names="true">
+    
+    <type name="name" datatype="VARCHAR(32)" />
+	  <type name="image" datatype="MEDIUMBLOB" />
+    
+    <entity name="person">
+      <attribute name="person_id" type="id" primarykey="true" autoincrement="true" />
+      <attribute name="first_name" type="name" />
+      <attribute name="middle_name" type="name" />
+      <attribute name="surname" type="name" />
+      <attribute name="image" type="image" />
+      <attribute name="circumstances" type="TEXT" />
+      <attribute name="dob" type="date" />
+      <attribute name="missing_date" datatype="DATE" />
+      <attribute name="sex" type="VARCHAR(6)" />
+      	<comment>This can only be male or female, thus length of max 6</comment>
+      <attribute name="height" type="integer" />
+      <attribute name="weight" type="integer" />
+      <attribute name="hair_color" type="text" />
+      <attribute name="eye_color" type="text" />
+      <attribute name="age" type="INTEGER(3)" />
+    </entity>
+    
+    <entity name="age_progression">
+			<attribute name="image" type="image" />
+		</entity>
+    
+    <entity name="case">
+			<attribute name="case_id" />
+			<attribute name="case_type" />
+		</entity>
+    
+    <entity name="supporter">
+      <attribute name="supporter_id" type="id" />
+      <attribute name="logo" type="image" />
+      <attribute name="org_name" type="name" />
+  		<attribute name="contact_name" type="name" />
+			<attribute name="email_address" />
+			<attribute name="phone_no" />
+    </entity>
+    
+    <entity name="missing_location">
+			<attribute name="city" />
+			<attribute name="state" />
+			<attribute name="province" />
+			<attribute name="country" />
+		</entity>
+    
+    <entity name="location">
+      <attribute name="location_id" type="id" />
+      <attribute name="country" type="text" />
+      <attribute name="location" type="text" />
+      <attribute name="state" type="text" />
+    </entity>
+    
+  	<relationship>
+			<role entity="case" min="0" />
+			<role entity="person" max="N" />
+		</relationship>
+		
+		<relationship>
+			<role entity="case" min="0" />
+			<role entity="agency" max="N" />
+		</relationship>
+	
+		<relationship>
+			<role entity="missing_location" min="0" />
+			<role entity="person" max="N" />
+			<comment>Min of 0 because this can be unknown, this is optional.</comment>
+		</relationship>
+		
+		<relationship>
+		<role entity="person" />
+		<role entity="age_progression" min="0" />
+		<comment>Age progression is optional.</comment>
+	</relationship>
+	
+		<comment>This model is for the International Missing Children website.</comment>
+	
+</model>

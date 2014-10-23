@@ -1,0 +1,237 @@
+body {
+	font: .8em/1.8em 'Tahoma', sans-serif;
+	background: #ffffff url(../images/header.jpg) top center repeat-x;
+	margin: 0;
+	font-size: 1em;
+}
+
+#head_container {
+	width: 100%;
+}
+
+#header {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#container {
+	width: 960px;
+}
+
+#main_content {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -20px;
+/* 	padding-bottom: 10px; */
+}
+
+#page_title {
+	width: 300px;
+	float: left;
+	margin-top: 26px;
+}
+
+#myslide {
+	width: 960px;
+	overflow: hidden;
+	position: relative;
+	height: 400px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#myslide .cover{
+	width: 5760px; /*------- class mystuff width * number of mystuff divs (960 * 5 = 5760)---------- */
+	position: absolute;
+	height: 400px;
+}
+
+#myslide .mystuff {
+	width: 960px;
+	float: left;
+	padding: 0px 0;
+}
+ 
+.button1,.button2,.button3,.button4,.button5,.button6 {
+	text-decoration: none; 
+ 	padding: 0px 6px 10px 6px;
+	margin-top: 0px;
+	font-weight: bold;
+	color: #00587a;
+}
+	
+.active {
+	color: #A84D58;
+ 	padding: 0px 6px 10px 6px;
+	outline: none;
+	font-weight: bold;
+}
+
+.button {
+	width: 600px;
+	margin-top: 80px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.button a:hover {
+	color: #BC6C76;
+}
+
+.button ul {
+	list-style: none;
+}
+	
+.button li {
+	display: inline;
+	margin:0px 5px 0px 5px;
+}
+
+.tweet_quarter {
+	width: 230px;
+	float: left;
+	margin-right: 4px;
+	margin-left: 4px;
+	padding-top: 20px;
+}
+
+#footer {
+	background: #b7e1f7 url(../images/footer.jpg) top center repeat-x;
+	min-width: 960px;
+	max-width: 100%;
+	height: 200px;
+/* 	margin-top:30px; */
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	text-align: center;
+}
+
+h1 {
+  font-family: 'Lobster', serif;
+  color: #00587a;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1em;
+}
+
+	
+.clearboth {
+	margin-top: 0px;
+	clear: both;
+}
+
+.subtitle{
+	width: 960px;
+	height: 20px;
+}
+
+.town_title{
+	float: left;
+	width: 240px;
+	text-align: center;
+	font-weight: bold;
+	color: #BC6C76;
+}
+
+.subtitle{
+	list-style-type: none; /* turns off display of bullet */
+}
+
+.subtitle li {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px;
+	display: inline
+}
+
+#footer p {color: #00587a; font-size: 0.75em; line-height: 16px; padding-top: 10px;}
+#footer a {font-weight: bold;}
+#footer a:link {color: #00587a; text-decoration: none;}
+#footer a:visited {color: #00587a;}
+#footer a:hover {color: #A84D58; text-decoration: none;}
+
+.tweet_quarter p.small a {font-size: 11px; line-height: 16px;}
+.tweet_quarter p.small a:link {color:#00587a; text-decoration: none;}      /* unvisited link */
+.tweet_quarter p.small a:visited {color:#00578a;} 
+.tweet_quarter p.small a:hover {color:#A84D58; text-decoration: none;}  
+.tweet_quarter p.small a:active {color:#00578a;}
+
+p {
+	font: .8em/1.8em 'Tahoma', sans-serif;
+	line-height: 8px; 
+}
+
+
+/* - - - - - - - - - ROSE & MEHREEN STYLES - - - - - - - - */
+
+
+div.quartertitle h2,
+div.quartertitle p {
+	text-align: center;
+	padding: 0px;
+	margin: -4px 0px;
+}
+
+img.flickrimg {
+	height: 80px;
+	width: 80px;
+	margin: 0px 10px;
+}
+
+#flickrwrapper {
+	width: 960px;
+	overflow: hidden;
+}
+
+#weatherwrapper {
+	width: 960px;
+	overflow: auto;
+
+}
+
+div.quarter {
+	width: 230px;
+	float: left;
+	margin-right: 4px;
+	margin-left: 4px;
+	padding-top: 20px;
+}
+
+div.quarterweather {
+	width: 230px;
+	float: left;
+	margin-right: 4px;
+	margin-left: 4px;
+	padding-top: 20px;
+	font-size:90%;
+}
+div.quarterweather span{
+font-size:85%;
+font-weight:bold;
+}
+div.quarterweather.small_station{
+font-size:85%;
+}
+
+div.quartertitle {
+	width: 230px;
+	float: left;
+	margin-right: 4px;
+	margin-left: 4px;
+	padding: 0px;
+
+}
+		
+div.centrecontents {
+	width: 200px;
+	padding: 0;
+	margin: 0 auto;
+}

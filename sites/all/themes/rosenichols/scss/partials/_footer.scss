@@ -1,0 +1,97 @@
+/* Footer */
+
+#zone-footer-wrapper {
+	background: #839441;
+	border-top: 10px solid #eff3de;
+}
+
+#zone-footer {
+	text-align: center;
+}
+
+#zone-above-footer-wrapper {
+	//margin-top: 50px;
+}
+
+#zone-footer-second-wrapper {
+	background: #97ab4b;
+	border-top: 10px solid #eff3de;
+}
+
+#region-footer-first {
+	@include respond(mobile) {
+		margin: 0;
+	}
+}
+
+#block-menu-menu-footer-menu {
+	text-align: center;
+	line-height: 1.75em;
+	width: 100%;
+	padding: 0.75em 1em 1em 1em;
+	text-transform: lowercase;
+	@include respond(mobile) {
+		padding: 0;
+	}
+	ul {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		font-family: $carrois-sc;
+		font-size: 1.375em;
+		display: inline;
+		list-style: none;
+		margin-left: 0;
+		padding: {
+			top: 0;
+			bottom: 0;
+			left: 20px;
+		}
+		@include respond(mobile) {
+			width: 100%;
+			float: none;
+			margin: 0;
+			border-top: 1px solid #eff3de;
+			text-align: center;
+			display: block;
+			font-size: 1.222em;
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
+			padding-top: 0.333em;
+			padding-bottom: 0.333em;
+			@include inline-block;
+			@include respond(mobile) {
+				display: block;
+			}
+			&.active,
+			&.active-trail {
+				background: url('../images/active-arrows.png') center -8px no-repeat;
+				@include respond(mobile) {
+					background: none;
+				}
+			}
+		}
+	}
+}
+
+#block-rose-copyright {
+	text-align: center;
+	color: #f0f4e1;
+	padding: 0.75em;
+	font-size: 0.875em;
+	letter-spacing: 0.06em;
+}
+
+
+/* sticky footer */
+html, body {height: 100%; margin: 0;}
+#page {display: table; width: 100%;}
+html>/**/body #page {height: 100%;}
+*:first-child+html #page {height: auto;}
+.section {display: table-row;}
+html>/**/body .section-content {height: 100%;}
+*:first-child+html body .section-content {height: auto;}

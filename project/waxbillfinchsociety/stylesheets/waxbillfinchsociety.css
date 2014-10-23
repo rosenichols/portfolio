@@ -1,0 +1,405 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	margin: 0px;
+	background: url('../images/stripebackground.png');
+	background-repeat: repeat;
+	color: #555;
+}
+
+#header {
+	height: 193px;
+	width: 100%;
+	background:#fff url('../images/topwhiteyellowpattern1.png') repeat-x center bottom;
+/* 	margin-top: 21px; */
+	margin-bottom: 0px; /* 51px */
+}
+
+#navigation {
+	background: url('../images/topwhiteyellowpattern2.png');
+	background-repeat: repeat-x;
+	background-attachment: static;
+	background-position: center bottom;
+	height: 36px;
+	width: 100%;
+}
+
+#navwrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 759px;
+}
+
+#title {
+	width: 760px;
+	height: 137px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 24px;
+}
+
+#greenstripe {
+	height: 15px;
+	width: 100%;
+/*   background: url('../images/greenstripe.png'); */
+	background-color: #4c5e23; /* #434342; */ /*#4f5e2d; #4c5e23 */
+}
+
+#lightgreenstripe {
+	height: 10px; /* 20px */
+	width: 100%;
+ 	background: url('../images/lightgreenstripe10.png');
+ 	background-attachment: static;
+ 	background-position: center bottom;
+ 	background-repeat: repeat-x;
+ 	margin-top: 3px;  /*5px */
+ 	border-left: none;
+ 	border-right: none;
+ 	border-top: 1px #ccc solid; /* c1c1c1 */
+ 	border-bottom: 1px #ccc solid;
+}
+
+#lightgreencontainer {
+ 	width: 100%;
+	height: 20px;
+	background: url('../images/white50backgroundstripes.png');
+	background-repeat: repeat-y;
+	background-attachment: static;
+	background-position: top center;
+	padding-top: 4px;
+  margin-left: -1px;
+}
+
+div.content {
+	width: 717px; /* 837 */ 
+	height: 100%;
+	background: url('../images/contentbg2.png') repeat-y center top;
+	margin: -16px auto 0px auto;
+	padding-left: 61px;
+	padding-right: 61px;
+/* 	border: 1px red solid; */
+}
+
+div.branch {
+	width: 340px;
+	float: left;
+}
+
+div.branch2 {
+	width: 340px;
+	float: left;
+	margin-right: 37px;
+}
+
+h1 {
+	font: 24px 'Lucida Grande', Arial, sans-serif;
+	text-align: center;
+	padding-top: 16px;
+ 	padding-bottom: 4px; 
+}
+
+h2 {
+	font: 20px 'Lucida Grande', Arial, sans-serif;
+	text-align: center;
+	padding-top: 10px;
+ 	padding-bottom: 6px; 
+/*  	font-weight: bold; */
+}
+
+h2.top {
+	font: 21px 'Lucida Grande', Arial, sans-serif;
+	text-align: center;
+	margin-top: -4px;
+ 	padding-bottom: 6px; 
+/*  	font-weight: bold; */
+}
+
+p {
+	font: 16px 'Lucida Grande', Arial, sans-serif;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+#logo {
+	display: block;
+	float: right;
+	padding: 0px 20px 20px 20px;
+}
+
+#links {
+	width: 100%;
+	border: 1px red solid;
+}
+
+ul {
+	font: 14px 'QuicksandBook', Arial, sans-serif;
+	line-height: 20px;
+}
+
+div.speciescontainerL {
+	background: url('../images/opacity30green.png') repeat left top;
+	width: 230px; /* 236 */
+	height: 27px;
+	border: 1px #d0d0d0 solid;
+	float: left;
+	margin-left: 0px;
+ 	margin-right: 10px;
+	margin-bottom: 19px;
+	padding-top: 14px;
+	font: 18px 'QuicksandBook', Arial, sans-serif;
+	text-align:center;
+
+}
+
+div.speciescontainer {
+	background: url('../images/opacity30green.png') repeat left top;
+	width: 230px; /* 236 */
+	height: 27px;
+	border: 1px #d0d0d0 solid;
+	float: left;
+	margin-left: 0px;
+ 	margin-right: 10px;
+	margin-bottom: 19px;
+	padding-top: 14px;
+	font: 18px 'QuicksandBook', Arial, sans-serif;
+	text-align:center;
+
+}
+
+div.speciescontainerR {
+	background: url('../images/opacity30green.png') repeat left top;
+	width: 230px; /* 236 */
+	height: 27px;
+	border: 1px #d0d0d0 solid;
+	float: left;
+	margin-left: 0px;
+	margin-bottom: 19px;
+	padding-top: 14px;
+	font: 18px 'QuicksandBook', Arial, sans-serif;
+	text-align:center;
+
+}
+
+
+
+/* NAVIGATION */
+
+
+#navaboutselected {
+	float: left;
+	width: 75px;
+	height: 36px;
+	display: block;
+	background: url('../images/aboutroll.png') 0 -36px no-repeat;
+}
+
+#navlinksselected {
+	float: left;
+	width: 61px;
+	height: 36px;
+	display: block;
+	margin-right: 3px;
+	background: url('../images/linksroll.png') 0 -36px no-repeat;
+}
+
+#navspeciesselected {
+	float: left;
+	width: 88px;
+	height: 36px;
+	display: block;
+	margin-right: 3px;
+	background: url('../images/speciesroll.png') 0 -36px no-repeat;
+}
+
+#navwfssalesselected {
+	float: left;
+	width: 84px;
+	height: 36px;
+	display: block;
+ 	margin-right: 3px;
+	background: url('../images/wfssalesroll.png') 0 -36px no-repeat;
+}
+
+
+#navhome {
+	float: left;
+	width: 73px; height: 36px;
+	margin-left: 2px;
+	margin-right: 3px;
+	background: url('../images/homeroll.png') 0 -36px no-repeat;
+}
+	
+#navabout {
+	float: left;
+	width: 72px; height: 36px;
+	margin-right: 3px;
+	background: url('../images/about2.png') 0 -36px no-repeat;
+}
+	
+#navspecies {
+	float: left;
+	width: 88px; height: 36px;
+	margin-right: 3px;
+	background: url('../images/speciesroll.png') 0 -36px no-repeat;
+}
+	
+#navrecords {
+	float: left;
+	width: 78px; height: 36px;
+	margin-right: 3px;
+	background: url('../images/recordsroll.png') 0 -36px no-repeat;
+}
+	
+#navmembership {
+	float: left;
+	width: 94px; height: 36px;
+	margin-right: 3px;
+	background: url('../images/membershiproll.png') 0 -36px no-repeat;
+}
+	
+#navsalewanted {
+	float: left;
+	width: 94px; height: 36px;
+	margin-right: 3px;
+	background: url('../images/salewantedroll.png') 0 -36px no-repeat;
+}
+	
+#navwfssales {
+	float: left;
+	width: 84px; height: 36px;
+	margin-right: 3px;
+	background: url('../images/wfssalesroll.png') 0 -36px no-repeat;
+}
+	
+#navlinks {
+	float: left;
+	width: 61px; height: 36px;
+	margin-right: 3px;
+	background: url('../images/linksroll.png') 0 -36px no-repeat;
+}
+	
+#navcontact {
+	float: left;
+	width: 88px; height: 36px;
+	margin: 0px;
+	background: url('../images/contactroll.png') 0 -36px no-repeat;
+}
+
+#navhome a {
+	display: block;
+	margin: 0; padding:0;
+	width:100%; height:100%;
+	overflow:hidden;
+	background: url('../images/homeroll.png') top left no-repeat;
+}
+	
+#navabout a {
+	display: block;
+	margin: 0; padding:0;
+	width:100%; height:100%;
+	overflow:hidden;
+ 	background: url('../images/aboutroll.png') top left no-repeat;
+}
+	
+#navspecies a {
+	display: block;
+	margin: 0; padding:0;
+	width:100%; height:100%;
+	overflow:hidden;
+	background: url('../images/speciesroll.png') top left no-repeat;
+}
+	
+#navbreeding a {
+	display: block;
+	margin: 0; padding:0;
+	width:100%; height:100%;
+	overflow:hidden;
+	background: url('../images/breedingroll.jpg') top left no-repeat;
+}
+	
+#navrecords a {
+  display: block;
+	margin: 0; padding:0px;
+	width:100%; height:100%;
+	overflow:hidden;
+	background: url('../images/recordsroll.png') top left no-repeat;
+}
+	
+#navmembership a {
+	display: block;
+	margin: 0; padding:0px;
+	width:100%; height:100%;
+	overflow:hidden;
+	background: url('../images/membershiproll.png') top left no-repeat;
+}
+	
+#navsalewanted a {
+	display: block;
+	margin: 0; padding:0px;
+	width:100%; height:100%;
+	overflow:hidden;
+	background: url('../images/salewantedroll.png') top left no-repeat;
+}
+		
+#navwfssales a {
+	display: block;
+	margin: 0; padding:0;
+	width:100%; height:100%;
+	overflow:hidden;
+ 	background: url('../images/wfssalesroll.png') top left no-repeat;
+}
+
+#navlinks a {
+	display: block;
+	margin: 0; padding:0;
+	width:100%; height:100%;
+	overflow:hidden;
+ 	background: url('../images/linksroll.png') top left no-repeat; 
+}
+	
+#navcontact a {
+	display: block;
+	margin: 0; padding:0;
+	width:100%; height:100%;
+	overflow:hidden;
+	background: url('../images/contactroll.png') top left no-repeat;
+}
+	
+#navhome a:hover {
+	background: url('../images/homeroll.png') 0px -36px no-repeat;
+}
+
+
+#navabout a:hover {
+	background:url('../images/aboutroll.png') 0px -36px no-repeat;
+}
+
+
+#navspecies a:hover {
+	background:url('../images/speciesroll.png') 0px -36px no-repeat;
+}
+
+#navrecords a:hover {
+	background:url('../images/recordsroll.png') 0px -36px no-repeat;
+}
+
+#navmembership a:hover {
+	background:url('../images/membershiproll.png') 0px -36px no-repeat;
+}
+
+#navsalewanted a:hover {
+	background:url('../images/salewantedroll.png') 0px -36px no-repeat;
+}
+
+#navwfssales a:hover {
+	background:url('../images/wfssalesroll.png') 0px -36px no-repeat;
+}
+
+#navlinks a:hover {
+	background:url('../images/linksroll.png') 0px -36px no-repeat;
+}
+
+#navcontact a:hover {
+	background:url('../images/contactroll.png') 0px -36px no-repeat;
+}

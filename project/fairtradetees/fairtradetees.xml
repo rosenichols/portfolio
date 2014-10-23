@@ -1,0 +1,74 @@
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.cems.uwe.ac.uk/xmlwiki/ER/model.xsd" name="Fair Trade Tees" quote-names="true">
+
+	<entity name="item">
+		<attribute name="item_id" datatype="INT" primarykey="true" autoincrement="true" />
+		<attribute name="name" />
+		<attribute name="brand" datatype="VARCHAR(30)" />
+		<attribute name="price" datatype="DECIMAL(3,2)" />
+			<comment>It is highly unlikely that a top will be sold for more than 999.99</comment>
+		<attribute name="description" datatype="TEXT" />
+		<attribute name="colour" datatype="VARCHAR(20)" />
+			<comment>The longest name colour has 20 characters</comment>
+		<attribute name="stock" datatype="INT" />
+		<attribute name="image" datatype="VARCHAR(100)" />
+	</entity>
+	
+	<entity name="category">
+		<attribute name="cat_id" datatype="INT" primarykey="true" autoincrement="true" />
+		<attribute name="category" datatype="VARCHAR(20)" />
+	</entity>
+
+	<entity name="user">
+		<attribute name="user_id" datatype="INT" primarykey="true" autoincrement="true" />
+		<attribute name="first_name" datatype="VARCHAR(30)" />
+		<attribute name="last_name" datatype="VARCHAR(30)" />
+		<attribute name="email" datatype="VARCHAR(100)" />
+		<attribute name="password" datatype="CHAR(32)" />
+	</entity>
+	
+	<entity name="order">
+		<attribute name="order_id" datatype="INT" primarykey="true" autoincrement="true" />
+		<attribute name="user_id" datatype="INT" />
+		<attribute name="card_digits" datatype="INT(4)" />
+	</entity>
+	
+	<entity name="address">
+		<attribute name="addr_id" datatype="INT" primarykey="true" autoincrement="true" />
+		<attribute name="addr1" datatype="VARCHAR(30)" />
+		<attribute name="addr2" datatype="VARCHAR(30)" />
+		<attribute name="city" datatype="VARCHAR(30)" />
+		<attribute name="county" datatype="VARCHAR(30)" />
+		<attribute name="post_code" datatype="VARCHAR(8)" />
+	</entity>
+	
+	
+	
+	
+
+	<relationship>
+		<role entity="item" min="0" max="N" />
+		<role entity="category" min="1" max="1" />
+	</relationship>
+
+	
+	<relationship>
+		<role entity="user" min="0" max="N" />
+		<role entity="item" min="0" max="N" />
+	</relationship>
+	
+	<relationship>
+		<role entity="user" min="1" max="1" />
+		<role entity="address" min="1" max="N" />
+	</relationship>
+	
+	<relationship>
+		<role entity="user" min="0" max="N" />
+		<role entity="order" min="1" max="1" />
+	</relationship>
+	
+	<relationship>
+		<role entity="order" min="1" max="N" />
+		<role entity="item" min="0" max="N" />
+	</relationship>
+	
+</model>

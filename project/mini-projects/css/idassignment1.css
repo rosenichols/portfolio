@@ -1,0 +1,105 @@
+/* 
+    Document   : idassignment1
+    Created on : Dec 15, 2011, 1:15:50 AM
+    Author     : Rose
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+body {
+  font-family: 'Minion Pro', Georgia, serif;
+}
+
+#backhome {
+  position: fixed;
+  top: -13px;
+  left: 3px;
+  border: 0;
+}
+
+p {
+  font-size:14px;
+  line-height: 1.8em;
+}
+
+a {
+  color: #9A1061;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6098C6;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 24px;
+}
+
+table, th, td {
+  border: 1px solid #A9A9A9;
+  border-collapse: collapse;
+  padding: 6px;
+}
+
+th {
+  background-color: #EDF4FC;
+  min-width: 143px;
+}
+
+table {
+  font-size: 13px;
+  line-height: 1.6em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 8px 0 8px 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+ul ul li {
+  margin: 0 0 0 34px;
+  list-style-type: square;
+  font-weight: normal;
+}
+
+#additional li {
+  margin: 0 0 0 16px;
+  list-style-type: square;
+  font-weight: normal;
+}
+
+#wrapper {
+  width: 680px;
+  margin: 0 auto;
+/*  border: 2px dashed black;*/
+  padding:  20px;
+}
+
+#projects,
+#additional {
+  padding: 5px 20px 20px 20px;
+  border: 1px solid #CCC;
+  margin: 0 0 20px 0;
+}
+
+#footer {
+  text-align: center;
+  margin: -10px 0 0 0;
+}

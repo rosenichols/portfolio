@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Folder>
+	<name>UWE</name>
+	<open>1</open>
+	<Placemark>
+		<name>Watershed</name>
+		<description>MediaLab</description>
+		<Point>
+			<coordinates>-2.5981374666585,51.45149994568725,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Bower Ashton</name>
+		<description><![CDATA[The home of the Faculty of <a href="http://www.uwe.ac.uk/amd/">Art, Media and Design</a>]]></description>
+		<Point>
+			<coordinates>-2.632474205298138,51.44408935082485,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>St. Matthias</name>
+		<description>The home of the Faculty of Humanities ? .</description>
+		<Point>
+			<coordinates>-2.53840253324897,51.48288281335965,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Glenside</name>
+		<description><![CDATA[<a href="http://www.uwe.ac.uk/hsc/">Heath and Social Care</a>Faculty is based in this very spacious site, the old Glenside Hospital.]]></description>
+		<Point>
+			<coordinates>-2.544908735065746,51.4837717951612,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Frenchay Campus</name>
+		<description>The main campus for UWE</description>
+		<Point>
+			<coordinates>-2.546598668889217,51.50033627026146,0</coordinates>
+		</Point>
+	</Placemark>
+</Folder>
+</kml>
