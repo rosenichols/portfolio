@@ -8,9 +8,6 @@ sites/*/private
 # Ignore Mac files
 .DS_Store
 
-# Temp
-sites/all/modules/custom/rose_gdrive
-
 # Ignore the dev enviroment files
 dev
 
