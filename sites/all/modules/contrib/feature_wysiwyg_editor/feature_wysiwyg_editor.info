@@ -13,6 +13,7 @@ dependencies[] = imce
 dependencies[] = imce_wysiwyg
 dependencies[] = strongarm
 dependencies[] = wysiwyg
+dependencies[] = wysiwyg_template
 datestamp = 1372900456
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
@@ -26,11 +27,10 @@ features[variable][] = imce_settings_replace
 features[variable][] = imce_settings_textarea
 features[variable][] = imce_settings_thumb_method
 features[wysiwyg][] = ckeditor_wysiwyg
-features[wysiwyg][] = tinymce_wysiwyg
 
-; Information added by Drupal.org packaging script on 2014-06-02
+; Information added by Drupal.org packaging script on 2014-07-21
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "feature_wysiwyg_editor"
-datestamp = "1401719631"
+datestamp = "1405928628"
 

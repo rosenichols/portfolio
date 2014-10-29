@@ -85,47 +85,6 @@ function feature_wysiwyg_editor_strongarm() {
         ),
       ),
     ),
-    3 => array(
-      'name' => 'wysiwyg',
-      'usertab' => 0,
-      'filesize' => '8',
-      'quota' => '0',
-      'tuquota' => '0',
-      'extensions' => 'gif png jpg jpeg',
-      'dimensions' => '0',
-      'filenum' => '1',
-      'directories' => array(
-        0 => array(
-          'name' => 'uploads',
-          'subnav' => 0,
-          'browse' => 1,
-          'upload' => 1,
-          'thumb' => 1,
-          'delete' => 1,
-          'resize' => 0,
-        ),
-      ),
-      'thumbnails' => array(
-        0 => array(
-          'name' => 'Thumb 220px',
-          'dimensions' => '220x165',
-          'prefix' => 'thumb_220_',
-          'suffix' => '',
-        ),
-        1 => array(
-          'name' => 'Thumb 300px',
-          'dimensions' => '300x225',
-          'prefix' => 'thumb_300_',
-          'suffix' => '',
-        ),
-        2 => array(
-          'name' => 'Thumb 380px',
-          'dimensions' => '380x285',
-          'prefix' => 'thumb_380_',
-          'suffix' => '',
-        ),
-      ),
-    ),
   );
   $export['imce_profiles'] = $strongarm;
 

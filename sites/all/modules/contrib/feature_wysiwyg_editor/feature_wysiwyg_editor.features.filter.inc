@@ -45,7 +45,7 @@ function feature_wysiwyg_editor_filter_default_formats() {
         'weight' => -47,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <ul> <ol> <li> <p> <br> <img> <h2> <h3> <h4> <pre> <blockquote> <acronym> <tr><td><th><table>',
+          'allowed_html' => '<a> <em> <strong> <ul> <ol> <li> <p> <br> <img> <h2> <h3> <h4> <pre> <blockquote> <acronym> <tr><td><th><table> <div> <button> <iframe> <span>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),

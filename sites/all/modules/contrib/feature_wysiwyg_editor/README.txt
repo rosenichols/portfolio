@@ -21,3 +21,9 @@ Move WYSIWYG to the top of the list.
 Currently the wysiwyg editor picks up the styles from the base theme, to counter this you can set the 'Editor css' option to 'Define CSS' and point the 'CSS path' it straight to the global.css file of your custom theme. 
 
 i.e. sites/all/themes/custom/css/global.css
+
+
+Make file
+
+BOOTSTRAP
+

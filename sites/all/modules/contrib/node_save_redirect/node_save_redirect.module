@@ -16,6 +16,7 @@ function node_save_redirect_form_alter(&$form, &$form_state, $form_id) {
       '#options' => array(0 => t('Default'),
         1 => t('Return to Edit page after saving.'),
         2 => t('Return to Content Overview after saving.'),
+        4 => t('Re-direct to My Workbench after saving'),
         3 => t('Re-direct to another location')),
       '#description' => t('Choose where the user should be sent after creating new content.'),
       '#default_value' => variable_get('node_save_redirect_' . $form['#node_type']->type, 0)
@@ -44,7 +45,7 @@ function node_save_redirect_form_alter(&$form, &$form_state, $form_id) {
  * A function that is called when a node is saved.
  *
  * @param array $form
- * @param array $form_state 
+ * @param array $form_state
  */
 function node_save_redirect_submit($form, &$form_state) {
 
@@ -58,6 +59,9 @@ function node_save_redirect_submit($form, &$form_state) {
     }
     else if ($node_save_redirect_settings == '2' && user_access('access content overview')) {
       $form_state['redirect'] = 'admin/content';
+    }
+    else if ($node_save_redirect_settings == '4' && user_access('access workbench')) {
+      $form_state['redirect'] = 'admin/workbench';
     }
     else if ($node_save_redirect_settings == '3') {
       $options = drupal_parse_url($custom_location);

@@ -14,3 +14,7 @@ dev
 # Ignore anything even vaguely DB config related
 db_config.php
 db_config.inc.php
+
+# Capistrano
+Capfile
+config
