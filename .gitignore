@@ -18,3 +18,5 @@ db_config.inc.php
 # Capistrano
 Capfile
 config
+
+sftp-config.json
