@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("//hello.myfonts.net/count/2c6ab9");
 /**
 * A set of default styles to use with the omega theme
 * 
@@ -6,7 +8,6 @@
 * system.menus.css -
 * @author Rob Holmes
 */
-@import url("//hello.myfonts.net/count/2a6bd1");
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; *behavior: url("/sites/all/themes/custom/js/boxsizing.htc"); }
 
 .alignright { float: right; margin: 0px 0px 10px 10px; }
@@ -207,10 +208,10 @@ html.js input.throbbing { background-position: 100% -18px; /* LTR */ }
 
 @font-face { font-family: 'josefin_sanslight'; src: url("../fonts/josefin/josefinsans-light-webfont.eot"); src: url("../fonts/josefin/josefinsans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/josefin/josefinsans-light-webfont.woff") format("woff"), url("../fonts/josefin/josefinsans-light-webfont.ttf") format("truetype"), url("../fonts/josefin/josefinsans-light-webfont.svg#josefin_sanslight") format("svg"); font-weight: normal; font-style: normal; }
 
-/** @license MyFonts Webfont Build ID 2780113, 2014-03-24T08:43:37-0400  The fonts listed in this notice are subject to the End User License Agreement(s) entered into by the website owner. All other parties are  explicitly restricted from using the Licensed Webfonts(s).  You may obtain a valid license at the URLs below.  Webfont: Silken Thread by Scholtz Fonts URL: http://www.myfonts.com/fonts/scholtz/silken/thread/ Copyright: Copyright (c) 2009 by Scholtz Fonts. All rights reserved.  License: http://www.myfonts.com/viewlicense?type=web&buildid=2780113 Licensed pageviews: 10,000  © 2014 MyFonts Inc
+/** @license MyFonts Webfont Build ID 2910905, 2014-10-28T09:49:58-0400  The fonts listed in this notice are subject to the End User License Agreement(s) entered into by the website owner. All other parties are explicitly restricted from using the Licensed Webfonts(s).  You may obtain a valid license at the URLs below.  Webfont: SilkenThread by Scholtz Fonts URL: http://www.myfonts.com/fonts/scholtz/silken/thread/ Copyright: Copyright (c) 2009 by Scholtz Fonts. All rights reserved. Licensed pageviews: 10,000   License: http://www.myfonts.com/viewlicense?type=web&buildid=2910905  © 2014 MyFonts Inc
 */
 /* @import must be at top of file, otherwise CSS will not work */
-@font-face { font-family: 'SilkenThread'; src: url("../fonts/webfonts/2A6BD1_0_0.ttf") format("truetype"); src: url("../fonts/webfonts/2A6BD1_0_0.eot"), url("../fonts/webfonts/2A6BD1_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/2A6BD1_0_0.woff") format("woff"); }
+@font-face { font-family: 'SilkenThread'; font-weight: normal; font-style: normal; src: url("../fonts/webfonts/2C6AB9_0_0.eot"); src: url("../fonts/webfonts/2C6AB9_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/2C6AB9_0_0.woff2") format("woff2"), url("../fonts/webfonts/2C6AB9_0_0.woff") format("woff"), url("../fonts/webfonts/2C6AB9_0_0.ttf") format("truetype"), url("../fonts/webfonts/2C6AB9_0_0.svg#wf") format("svg"); }
 
 /* Common */
 * { -webkit-font-smoothing: antialiased; }
