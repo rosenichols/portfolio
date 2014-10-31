@@ -10,13 +10,17 @@ sites/*/private
 
 # Ignore the dev enviroment files
 dev
+staging
 
 # Ignore anything even vaguely DB config related
 db_config.php
 db_config.inc.php
 
+.ftpquota
+
 # Capistrano
 Capfile
 config
 
-sftp-config.json
+# SASS
+.sass-cache
