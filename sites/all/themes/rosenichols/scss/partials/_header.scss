@@ -26,9 +26,9 @@
 	a {
 		color: #fff;
 		font-size: 42px;
-		line-height: 97px;
+		line-height: 1em;
 		display: block;
-		padding-top: 5px;
+		padding-top: 0.381em;
 		&:hover,
 		&:focus {
 			color: inherit;
@@ -74,7 +74,9 @@
 		margin: 0 auto;
 		a {
 			font-size: 90px;
-			line-height: 180px;
+			line-height: 1em;
+			padding-bottom: 0.75em;
+			padding-top: 0.25em;
 			@include respond(mobile) {
 				font-size: 48px;
 				line-height: 100px;
