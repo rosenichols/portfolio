@@ -118,7 +118,7 @@ function rose_block_info() {
 
   $blocks['home_social_blocks'] = array(
     'info' => t('Homepage social blocks'),
-    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'cache' => DRUPAL_NO_CACHE,
   );
 
   return $blocks;
