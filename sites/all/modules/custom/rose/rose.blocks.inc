@@ -434,8 +434,6 @@ function _rose_generate_delicious() {
   $info = curl_getinfo($ch);
   curl_close($ch);
 
-  kpr($info);
-
 
   if ((int)$info['http_code'] == 200) {
 
