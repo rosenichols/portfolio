@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Functions to create a publish button. Real simple, but could be needed.
@@ -46,8 +47,8 @@ function publish_button_form_alter(&$form, &$form_state, $form_id) {
       '#default_value' => variable_get('publish_button_content_type_' . $form['#node_type']->type, FALSE),
     );
   }
-
 }
+
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
@@ -96,7 +97,23 @@ function publish_button_form_node_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+  // Add functionality to work with inline entity form.
+  if (!empty($form_state['inline_entity_form'])) {
+    // Try to find the main submit button in the most common places.
+    $submit_element = NULL;
+    if (!empty($form['submit'])) {
+      $submit_element = &$form['submit'];
+    }
+    elseif (!empty($form['actions']['publish'])) {
+      $submit_element = &$form['actions']['publish'];
+    }
+    if ($submit_element) {
+      $submit = array_merge(array('inline_entity_form_trigger_submit'), $submit_element['#submit']);
+      $submit_element['#submit'] = $submit;
+    }
+  }
 }
+
 /**
  * Render publish button.
  */
@@ -173,14 +190,10 @@ function publish_button_permission() {
           'title' => t('@type: Publish any', array('@type' => $type->name)));
         $perms['publish button publish own ' . $type->type] = array(
           'title' => t('@type: Publish own', array('@type' => $type->name)));
-        $perms['publish button publish editable ' . $type->type] = array(
-          'title' => t('@type: Publish editable', array('@type' => $type->name)));
         $perms['publish button unpublish any ' . $type->type] = array(
           'title' => t('@type: Unpublish any', array('@type' => $type->name)));
         $perms['publish button unpublish own ' . $type->type] = array(
           'title' => t('@type: Unpublish own', array('@type' => $type->name)));
-        $perms['publish button unpublish editable ' . $type->type] = array(
-          'title' => t('@type: Unpublish editable', array('@type' => $type->name)));
       }
     }
   }
@@ -193,9 +206,8 @@ function publish_button_permission() {
 function _publish_button_publish_permissions($type) {
   global $user;
   if (user_access('publish button publish any ' . $type) ||
-     user_access('publish button publish own ' . $type) ||
-     user_access('publish button publish editable ' . $type) ||
-     user_access('publish button publish any content types') == TRUE) {
+      user_access('publish button publish own ' . $type) ||
+      user_access('publish button publish any content types') == TRUE) {
     return TRUE;
   }
   else {
@@ -209,16 +221,14 @@ function _publish_button_publish_permissions($type) {
 function _publish_button_unpublish_permissions($type) {
   global $user;
   if (user_access('publish button unpublish any ' . $type) ||
-    user_access('publish button unpublish own ' . $type) ||
-    user_access('publish button unpublish editable ' . $type) ||
-    user_access('publish button unpublish any content types') == TRUE) {
+      user_access('publish button unpublish own ' . $type) ||
+      user_access('publish button unpublish any content types') == TRUE) {
     return TRUE;
   }
   else {
     return FALSE;
   }
 }
-
 
 // Start of views integration.
 /**

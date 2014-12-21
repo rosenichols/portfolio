@@ -16,7 +16,7 @@ class publish_button_views_handler_node_link extends views_handler_field_node_li
 
   function option_definition() {
     $options = parent::option_definition();
-    $options['text'] = array('default' => '', 'translatable' => TRUE);
+    $options['publish'] = $options['unpublish'] = array('default' => '', 'translatable' => TRUE);
     return $options;
   }
 
@@ -24,12 +24,12 @@ class publish_button_views_handler_node_link extends views_handler_field_node_li
     parent::options_form($form, $form_state);
     // The default handler only have one text to display, unset to use two.
     unset($form['text']);
-    $form['publish_button_publish'] = array(
+    $form['publish'] = array(
       '#type' => 'textfield',
       '#title' => t('Text to display for publishing'),
       '#default_value' => $this->options['publish'],
     );
-    $form['publish_button_unpublish'] = array(
+    $form['unpublish'] = array(
       '#type' => 'textfield',
       '#title' => t('Text to display for unpublishing'),
       '#default_value' => $this->options['unpublish'],
@@ -62,7 +62,7 @@ class publish_button_views_handler_node_link extends views_handler_field_node_li
         $this->options['alter']['path'] = 'publish_button/' . $data . '/' . $status;
         $this->options['alter']['query'] = drupal_get_destination();
         $this->options['alter']['query']['csrf_token'] = $csrf_token;
-        $text = empty($this->options[$status]) ? t($status) : $this->options[$status];
+        $text = empty($this->options[$status]) ? t($status) : t($this->options[$status]);
         $publish_button = array(
           '#type' => 'button',
           '#access' => TRUE,
