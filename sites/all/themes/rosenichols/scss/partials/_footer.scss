@@ -1,97 +1,67 @@
 /* Footer */
 
-#zone-footer-wrapper {
-	background: #839441;
-	border-top: 10px solid #eff3de;
+.footer {
+  margin-top: -43px;
 }
 
-#zone-footer {
-	text-align: center;
-}
-
-#zone-above-footer-wrapper {
-	//margin-top: 50px;
-}
-
-#zone-footer-second-wrapper {
-	background: #97ab4b;
-	border-top: 10px solid #eff3de;
-}
-
-#region-footer-first {
-	@include respond(mobile) {
-		margin: 0;
-	}
-}
-
-#block-menu-menu-footer-menu {
-	text-align: center;
-	line-height: 1.75em;
-	width: 100%;
-	padding: 0.75em 1em 1em 1em;
-	text-transform: lowercase;
-	@include respond(mobile) {
-		padding: 0;
-	}
-	ul {
-		text-align: center;
-		margin: 0;
-		padding: 0;
-	}
-	li {
-		font-family: $carrois-sc;
-		font-size: 1.375em;
-		display: inline;
-		list-style: none;
-		margin-left: 0;
-		padding: {
-			top: 0;
-			bottom: 0;
-			left: 20px;
-		}
-		@include respond(mobile) {
-			width: 100%;
-			float: none;
-			margin: 0;
-			border-top: 1px solid #eff3de;
-			text-align: center;
-			display: block;
-			font-size: 1.222em;
-		}
-		a {
-			color: #fff;
-			text-decoration: none;
-			padding-top: 0.333em;
-			padding-bottom: 0.333em;
-			@include inline-block;
-			@include respond(mobile) {
-				display: block;
-			}
-			&.active,
-			&.active-trail {
-				background: url('../images/active-arrows.png') center -8px no-repeat;
-				@include respond(mobile) {
-					background: none;
-				}
-			}
-		}
-	}
+.page-bottom-inner {
+  padding-top: 1.25em;
+    padding-bottom: 1.25em;
+  @include breakpoint($tablet) {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+  @include breakpoint($desktop) {
+    padding-top: 1.75em;
+    padding-bottom: 1.75em;
+  }
 }
 
 #block-rose-copyright {
-	text-align: center;
-	color: #f0f4e1;
-	padding: 0.75em;
-	font-size: 0.875em;
-	letter-spacing: 0.06em;
+  text-align: center;
+  color: #f0f4e1;
+  padding: 0.75em;
+  font-size: 0.875em;
+  letter-spacing: 0.06em;
 }
 
+.copyright-terms {
+  position: relative;
+  clear: both;
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #4C4D4F;
+  border-top: 3px solid #F2F2F2;
+  span {
+    font-size: 1.2em;
+    display: block;
+    @include breakpoint($tablet) {
+      display: inline;
+    }
+  }
+  .copyright {
+    color: #94c0c1;
+    margin-right: 0.292em;
+  }
+  .terms a {
+    color: #b9b9b9;
+    &:hover,
+    &:focus {
+      @include breakpoint($tablet) {
+        color: #e4e4e4;
+        transition: color 0.5s ease;
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}
 
-/* sticky footer */
-html, body {height: 100%; margin: 0;}
-#page {display: table; width: 100%;}
-html>/**/body #page {height: 100%;}
-*:first-child+html #page {height: auto;}
-.section {display: table-row;}
-html>/**/body .section-content {height: 100%;}
-*:first-child+html body .section-content {height: auto;}
+.section-about .copyright-terms {
+  border-color: #b6a7c5;
+}
+
+.section-portfolio .copyright-terms {
+  border-color: #bed5ec;
+}
+

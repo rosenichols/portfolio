@@ -1,0 +1,5 @@
+name = Rose Responsive Images
+description = Generate images with srcset and sizes attributes
+package = Rose Nichols
+core = 7.x
+files[] = rose_respimg.module

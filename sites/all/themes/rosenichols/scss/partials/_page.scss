@@ -1,0 +1,66 @@
+/* Page */
+
+.all-bar-footer {
+  min-height: 100%;
+}
+
+.node .field:last-of-type {
+  margin-bottom: 0;
+}
+
+.page {
+  margin-top: 2em;
+  padding-bottom: 43px;
+  margin-bottom: -43px;
+  .main {
+    @include breakpoint($tablet) {
+      margin-bottom: 5em;
+    }
+  }
+  &.has-promo .main {
+    @include breakpoint($tablet) {
+      //margin-bottom: 7em;
+    }
+  }
+}
+
+.section-about {
+  .node-page.view-mode-full {
+    p {
+      margin-bottom: 1.25em;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    span {
+      color: #4c4d4f;
+    }
+  }
+  .field-name-field-promo-text {
+    p {
+      margin-bottom: 0.5em;
+    }
+    span {
+      display: block;
+    }
+    .quote {
+      margin-bottom: 1em;
+      &.last {
+        margin-bottom: 0;
+      }
+    }
+    blockquote {
+      padding-left: 0.7em;
+      border-left: 4px solid #90B5BE;
+      margin: 0;
+      margin-bottom: 0.5em;
+    }
+    .quote-owner {
+      color: #3A727F;
+    }
+    .quote-position {
+      font-size: 0.75em;
+      color: #5596C5;
+    }
+  }
+}

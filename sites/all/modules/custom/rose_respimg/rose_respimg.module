@@ -1,0 +1,169 @@
+<?php
+ /*
+ * Ammended with thanks, from:
+ * stephanemartinw.com/articles/21-responsives-images-srcset-sizes-drupal.
+ */
+
+
+ /*
+ * Implements hook_theme_registry_alter
+ */
+function roserespimg_theme_registry_alter(&$theme_registry) {
+   if (isset($theme_registry['image'])) {
+    $theme_registry['image']['function'] = 'roserespimg_image';
+  }
+}
+
+ /**
+ * Override theme_image
+ */
+function roserespimg_image($variables) {
+
+  $img_source = file_create_url($variables['path']);
+
+  $dest_basepath = variable_get('file_public_path', conf_path() . '/files');
+  $file_name = drupal_basename($img_source);
+
+  $variables['attributes']['src'] = '/' . $dest_basepath . '/styles/medium/public/' . $file_name;
+
+  if (preg_match('#public://#i', $variables['path']) == 1) {
+  // It starts with 'public://'
+
+    // Srcset.
+    $srcset = _rose_respimg_get_srcset($img_source, $variables['width'], $variables['height']);
+
+    if ($srcset) {
+      $variables['attributes']['srcset'] = $srcset;
+    }
+
+    // Sizes.
+    if (array_key_exists('class', $variables['attributes'])) {
+
+      $classes = explode(' ', $variables['attributes']['class']);
+
+      $sizes = _roserespimg_get_sizes($classes);
+      if (strlen($sizes)) $variables['attributes']['sizes'] = $sizes;
+    }
+  }
+
+  $attributes = $variables['attributes'];
+
+  foreach (array('width', 'height', 'alt', 'title') as $key) {
+
+    if (isset($variables[$key])) {
+      $attributes[$key] = $variables[$key];
+    }
+  }
+
+  return '<img' . drupal_attributes($attributes) . ' />';
+}
+
+
+/**
+ * Get sizes for image.
+ */
+// function _rose_respimg_get_sizes($classes) {
+
+//   $sizes = '';
+
+//   foreach ($classes as $class) {
+//     if (strpos($class, 'image-') !== false) {
+//       $class = $class;
+//       break;
+//     }
+//   }
+
+//   if (strlen($class) == 0) return $sizes;
+
+//   switch($class) {
+
+//     case 'image-type':
+//       $sizes="(min-width: 64em) 11.11vw";
+//     break;
+
+//     case 'image-type-two':
+//     default:
+//       $sizes='100vw';
+//     break;
+//   }
+
+//   return $sizes;
+// }
+
+/**
+ * Get srcset for image.
+ */
+function _rose_respimg_get_srcset($source, $width, $height) {
+
+  $srcset = array();
+
+  // Remove itok from source.
+  $arr = explode("?", $source);
+  $source = $arr[0];
+
+  // Remove base.
+  $source = str_replace($GLOBALS['base_url'] .'/', '', $source);
+
+  $file_name = drupal_basename($source);
+
+  $dest_basepath = variable_get('file_public_path', conf_path() . '/files');
+
+
+  $destination = $dest_basepath . '/styles/small/public/' . $file_name;
+  if (_rose_respimg_generate_image($source, $destination, 'small')) {
+    $srcset[0]['uri'] = $destination;
+    $srcset[0]['width'] = ($width / 4) . 'w';
+    $srcset[0]['multiplier'] = '1x';
+  }
+
+  $destination =  $dest_basepath . '/styles/medium/public/' . $file_name;
+  if (_rose_respimg_generate_image($source, $destination, 'medium')) {
+    $srcset[1]['uri'] = $destination;
+    $srcset[1]['width'] = ($width / 2) . 'w';
+    $srcset[1]['multiplier'] = '1x';
+  }
+
+  $destination =  $dest_basepath . '/styles/large/public/' . $file_name;
+  if (_rose_respimg_generate_image($source, $destination, 'large')) {
+    $srcset[2]['uri'] = $destination;
+    $srcset[2]['width'] = (($width * 3) / 4). 'w';
+    $srcset[2]['multiplier'] = '1x';
+  }
+
+  $srcset[3]['uri'] = $source;
+  $srcset[3]['width'] = $width . 'w';
+  $srcset[3]['multiplier'] = '1x';
+
+
+  if (!empty($srcset)) {
+    $srcsetitems = array();
+    foreach ($srcset as $src) {
+      // URI is mandatory.
+      $source = file_create_url($src['uri']);
+      if (isset($src['width']) && !empty($src['width'])) {
+        $source .= ' ' . $src['width'];
+      }
+      elseif (isset($src['multiplier']) && !empty($src['multiplier'])) {
+        $source .= ' ' . $src['multiplier'];
+      }
+      $srcsetitems[] = $source;
+    }
+
+    return implode(', ', $srcsetitems);
+  }
+
+  return false;
+}
+
+/**
+ * Function to generate image.
+ */
+function _rose_respimg_generate_image($source, $dest, $styles) {
+  if (!file_exists($dest)) {
+    $display_style = image_style_load($styles);
+    return image_style_create_derivative($display_style, $source, $dest);
+  }
+  else {
+    return true;
+  }
+}

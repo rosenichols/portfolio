@@ -1,286 +1,141 @@
-name = 'Rose Nichols Theme'
-description = ''
-core = '7.x'
-engine = 'phptemplate'
-screenshot = 'screenshot.png'
-base theme = 'omega'
-
-zones[header] = 'Header'
-zones[above_content] = 'Above Content'
-zones[content] = 'Content'
-zones[featured_content] = 'Featured Content'
-zones[above_footer] = 'Above Footer'
-zones[footer] = 'Footer'
-zones[footer_second] = 'Footer Second'
-zones[header] = 'Header'
-
-regions[header] = 'Header'
-regions[above_content] = 'Above content'
-regions[sidebar_first] = 'Sidebar First'
-regions[content] = 'Content'
-regions[sidebar_second] = 'Sidebar Second'
-regions[featured_content] = 'Featured Content'
-regions[above_footer] = 'Above Footer'
-regions[footer_first] = 'Footer First'
-regions[footer_second] = 'Footer Second'
-regions[copyright] = 'Copyright Info'
-
-css[global.css][name] = 'Your custom global styles'
-css[global.css][description] = 'This file holds all the globally active custom CSS of your theme.'
-css[global.css][options][weight] = '10'
-settings[alpha_grid] = 'alpha_default'
-settings[alpha_primary_alpha_default] = 'normal'
-settings[alpha_responsive] = '1'
-settings[alpha_layouts_alpha_fluid_primary] = 'normal'
-settings[alpha_layouts_alpha_fluid_normal_responsive] = '0'
-settings[alpha_layouts_alpha_fluid_normal_media] = 'all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)'
-settings[alpha_layouts_alpha_default_primary] = 'normal'
-settings[alpha_layouts_alpha_default_fluid_responsive] = '0'
-settings[alpha_layouts_alpha_default_fluid_media] = 'all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)'
-settings[alpha_layouts_alpha_default_fluid_weight] = '0'
-settings[alpha_layouts_alpha_default_narrow_responsive] = '1'
-settings[alpha_layouts_alpha_default_narrow_media] = 'all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)'
-settings[alpha_layouts_alpha_default_narrow_weight] = '1'
-settings[alpha_layouts_alpha_default_normal_responsive] = '1'
-settings[alpha_layouts_alpha_default_normal_media] = 'all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)'
-settings[alpha_layouts_alpha_default_normal_weight] = '2'
-settings[alpha_layouts_alpha_default_wide_responsive] = '1'
-settings[alpha_layouts_alpha_default_wide_media] = 'all and (min-width: 1220px)'
-settings[alpha_layouts_alpha_default_wide_weight] = '3'
-settings[alpha_viewport] = '1'
-settings[alpha_viewport_initial_scale] = '1'
-settings[alpha_viewport_min_scale] = '1'
-settings[alpha_viewport_max_scale] = '1'
-settings[alpha_viewport_user_scaleable] = ''
-settings[alpha_libraries][omega_formalize] = 'omega_formalize'
-settings[alpha_libraries][omega_equalheights] = ''
-settings[alpha_libraries][omega_mediaqueries] = 'omega_mediaqueries'
-settings[alpha_css][alpha-reset.css] = 'alpha-reset.css'
-settings[alpha_css][alpha-mobile.css] = 'alpha-mobile.css'
-settings[alpha_css][alpha-alpha.css] = 'alpha-alpha.css'
-settings[alpha_css][omega-text.css] = 'omega-text.css'
-settings[alpha_css][omega-branding.css] = 'omega-branding.css'
-settings[alpha_css][omega-menu.css] = 'omega-menu.css'
-settings[alpha_css][omega-forms.css] = 'omega-forms.css'
-settings[alpha_css][omega-visuals.css] = 'omega-visuals.css'
-settings[alpha_css][global.css] = 'global.css'
-settings[alpha_debug_block_toggle] = '1'
-settings[alpha_debug_block_active] = '1'
-settings[alpha_debug_grid_toggle] = '1'
-settings[alpha_debug_grid_active] = '1'
-settings[alpha_debug_grid_roles][1] = '1'
-settings[alpha_debug_grid_roles][2] = '2'
-settings[alpha_debug_grid_roles][3] = '3'
-settings[alpha_toggle_messages] = '1'
-settings[alpha_toggle_action_links] = '1'
-settings[alpha_toggle_tabs] = '1'
-settings[alpha_toggle_breadcrumb] = '1'
-settings[alpha_toggle_page_title] = '1'
-settings[alpha_toggle_feed_icons] = '1'
-settings[alpha_hidden_title] = ''
-settings[alpha_hidden_site_name] = ''
-settings[alpha_hidden_site_slogan] = ''
-settings[alpha_zone_header_equal_height_container] = ''
-settings[alpha_zone_header_wrapper] = '1'
-settings[alpha_zone_header_force] = ''
-settings[alpha_zone_header_section] = 'header'
-settings[alpha_zone_header_weight] = '0'
-settings[alpha_zone_header_columns] = '12'
-settings[alpha_zone_header_primary] = ''
-settings[alpha_zone_header_css] = ''
-settings[alpha_zone_header_wrapper_css] = ''
-
-settings[alpha_zone_above_content_equal_height_container] = ''
-settings[alpha_zone_above_content_wrapper] = '1'
-settings[alpha_zone_above_content_force] = '1'
-settings[alpha_zone_above_content_section] = 'content'
-settings[alpha_zone_above_content_weight] = '0'
-settings[alpha_zone_above_content_columns] = '12'
-settings[alpha_zone_above_content_primary] = 'above_content'
-settings[alpha_zone_above_content_css] = ''
-settings[alpha_zone_above_content_wrapper_css] = ''
-
-settings[alpha_zone_content_equal_height_container] = ''
-settings[alpha_zone_content_wrapper] = '1'
-settings[alpha_zone_content_force] = '1'
-settings[alpha_zone_content_section] = 'content'
-settings[alpha_zone_content_weight] = '1'
-settings[alpha_zone_content_columns] = '12'
-settings[alpha_zone_content_primary] = 'content'
-settings[alpha_zone_content_css] = ''
-settings[alpha_zone_content_wrapper_css] = ''
+; Drupal's .info files allow themers to easily specify some of the static
+; properties of your theme. Properties such as its name, stylesheets,
+; javascripts, and block regions.
+;
+; Drupal 7 stores a cache of the data in this .info files. If you modify any
+; lines in this file, you MUST refresh Drupal 7's cache by simply visiting the
+; Appearance page at admin/appearance.
 
 
-settings[alpha_zone_featured_content_equal_height_container] = ''
-settings[alpha_zone_featured_content_wrapper] = '1'
-settings[alpha_zone_featured_content_force] = ''
-settings[alpha_zone_featured_content_section] = 'content'
-settings[alpha_zone_featured_content_weight] = '2'
-settings[alpha_zone_featured_content_columns] = '12'
-settings[alpha_zone_featured_content_primary] = 'content'
-settings[alpha_zone_featured_content_css] = ''
-settings[alpha_zone_featured_content_wrapper_css] = ''
+
+; The name, description and screenshot used for this theme on the Appearance
+; page at admin/appearance.
+
+screenshot  = screenshot.png
+name        = Rose Nichols Portfolio
+description = Read the <a href="https://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Zen.
 
 
-settings[alpha_zone_above_footer_equal_height_container] = ''
-settings[alpha_zone_above_footer_wrapper] = '1'
-settings[alpha_zone_above_footer_force] = ''
-settings[alpha_zone_above_footer_section] = 'content'
-settings[alpha_zone_above_footer_weight] = '3'
-settings[alpha_zone_above_footer_columns] = '12'
-settings[alpha_zone_above_footer_primary] = ''
-settings[alpha_zone_above_footer_css] = ''
-settings[alpha_zone_above_footer_wrapper_css] = ''
+
+; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
+
+core        = 7.x
+base theme  = zen
 
 
-settings[alpha_zone_footer_equal_height_container] = ''
-settings[alpha_zone_footer_wrapper] = '1'
-settings[alpha_zone_footer_force] = ''
-settings[alpha_zone_footer_section] = 'footer'
-settings[alpha_zone_footer_weight] = '2'
-settings[alpha_zone_footer_columns] = '12'
-settings[alpha_zone_footer_primary] = ''
-settings[alpha_zone_footer_css] = ''
-settings[alpha_zone_footer_wrapper_css] = ''
+
+; This section controls the CSS files for your theme. There are 3 different
+; things you can do with a "stylesheets" line:
+; - Add a new stylesheet for your theme.
+; - Override a module's stylesheet. If the stylesheet you are adding uses the
+;   same filename as a stylesheet from a Drupal core or contrib module, your CSS
+;   file will be used instead of the module's file.
+; - Remove a module's stylesheet. If you specify the name of a Drupal core or
+;   contrib module's stylesheets, Drupal will remove that stylesheet if you do
+;   NOT include a file with that name with your theme.
+;
+; stylesheets[MEDIA][] = FILE
+;
+; The "FILE" is the name of the stylesheet to add/override/remove.
+; The "MEDIA" in the first set of brackets is a media type or a media query.
+; Typical CSS media types include "all", "screen", "print", and "handheld". A
+; typical media query is "screen and (max-width: 320px)".
+;
+; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
+; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
+
+; First we remove the system's menu and message styling since Zen has its own.
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = system.messages.css
+stylesheets[all][] = system.theme.css
+
+; Then we add our own stylesheet.
+stylesheets[all][] = css/global.css
+
+; Optionally add some JavaScripts to your theme.
+; scripts[] = js/custom.js
+
+; This section lists the regions defined in Zen's default page.tpl.php and
+; maintenance-page.tpl.php files. The name in brackets is the machine name of
+; the region. The text after the equals sign is a descriptive text used on the
+; admin/structure/blocks page.
+;
+; In the page.tpl, the contents of the region are output with a
+; $page['MACHINE-NAME'] variable and, in the maintenance-page.tpl, the region is
+; output with a $MACHINE-NAME variable. For example, with this line in the .info
+; file:
+;   regions[header_top] = Header top
+; You'll use this variable in page.tpl.php:
+;   <?php print render($page['header_top']); ?>
+; And you'll use this variable in maintenance-page.tpl.php:
+;   <?php print $header_top; ?>
+
+regions[header]         = Header
+regions[sidebar_first]  = First sidebar
+regions[content]        = Content
+regions[sidebar_second] = Second sidebar
+regions[promo]          = Promo
+
+; The page_top and page_bottom regions are hidden, which means they will not
+; show up on the blocks administration page. But they are required in order for
+; the html.tpl.php to work properly, so do not delete them.
+
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
 
 
-settings[alpha_zone_footer_second_equal_height_container] = ''
-settings[alpha_zone_footer_second_wrapper] = '1'
-settings[alpha_zone_footer_second_force] = ''
-settings[alpha_zone_footer_second_section] = 'footer'
-settings[alpha_zone_footer_second_weight] = '3'
-settings[alpha_zone_footer_second_columns] = '12'
-settings[alpha_zone_footer_second_primary] = ''
-settings[alpha_zone_footer_second_css] = ''
-settings[alpha_zone_footer_second_wrapper_css] = ''
+
+; Various page elements output by the theme can be toggled on and off. The
+; "features" control which of these check boxes display on the
+; admin/appearance config page. This is useful for suppressing check boxes
+; for elements not used by your sub-theme. To suppress a check box, omit the
+; entry for it below. See the Drupal 7 Theme Guide for more info:
+; https://drupal.org/node/171205#features
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
 
 
-settings[alpha_region_dashboard_sidebar_equal_height_container] = ''
-settings[alpha_region_dashboard_sidebar_equal_height_element] = ''
-settings[alpha_region_dashboard_sidebar_force] = ''
-settings[alpha_region_dashboard_sidebar_zone] = ''
-settings[alpha_region_dashboard_sidebar_prefix] = ''
-settings[alpha_region_dashboard_sidebar_columns] = '1'
-settings[alpha_region_dashboard_sidebar_suffix] = ''
-settings[alpha_region_dashboard_sidebar_weight] = '-50'
-settings[alpha_region_dashboard_sidebar_css] = ''
-settings[alpha_region_dashboard_inactive_equal_height_container] = ''
-settings[alpha_region_dashboard_inactive_equal_height_element] = ''
-settings[alpha_region_dashboard_inactive_force] = ''
-settings[alpha_region_dashboard_inactive_zone] = ''
-settings[alpha_region_dashboard_inactive_prefix] = ''
-settings[alpha_region_dashboard_inactive_columns] = '1'
-settings[alpha_region_dashboard_inactive_suffix] = ''
-settings[alpha_region_dashboard_inactive_weight] = '-50'
-settings[alpha_region_dashboard_inactive_css] = ''
-settings[alpha_region_dashboard_main_equal_height_container] = ''
-settings[alpha_region_dashboard_main_equal_height_element] = ''
-settings[alpha_region_dashboard_main_force] = ''
-settings[alpha_region_dashboard_main_zone] = ''
-settings[alpha_region_dashboard_main_prefix] = ''
-settings[alpha_region_dashboard_main_columns] = '1'
-settings[alpha_region_dashboard_main_suffix] = ''
-settings[alpha_region_dashboard_main_weight] = '-50'
-settings[alpha_region_dashboard_main_css] = ''
-settings[alpha_region_header_equal_height_container] = ''
-settings[alpha_region_header_equal_height_element] = ''
-settings[alpha_region_header_force] = ''
-settings[alpha_region_header_zone] = 'header'
-settings[alpha_region_header_prefix] = ''
-settings[alpha_region_header_columns] = '12'
-settings[alpha_region_header_suffix] = ''
-settings[alpha_region_header_weight] = '1'
-settings[alpha_region_header_css] = ''
-settings[alpha_region_above_content_equal_height_container] = ''
-settings[alpha_region_above_content_equal_height_element] = ''
-settings[alpha_region_above_content_force] = ''
-settings[alpha_region_above_content_zone] = 'above_content'
-settings[alpha_region_above_content_prefix] = ''
-settings[alpha_region_above_content_columns] = '12'
-settings[alpha_region_above_content_suffix] = ''
-settings[alpha_region_above_content_weight] = '1'
-settings[alpha_region_above_content_css] = ''
-settings[alpha_region_content_equal_height_container] = ''
-settings[alpha_region_content_equal_height_element] = ''
-settings[alpha_region_content_force] = ''
-settings[alpha_region_content_zone] = 'content'
-settings[alpha_region_content_prefix] = ''
-settings[alpha_region_content_columns] = '6'
-settings[alpha_region_content_suffix] = ''
-settings[alpha_region_content_weight] = '2'
-settings[alpha_region_content_css] = ''
+
+; Set the default values of settings on the theme-settings.php form.
+
+settings[zen_breadcrumb]           = yes
+settings[zen_breadcrumb_separator] = ' › '
+settings[zen_breadcrumb_home]      = 1
+settings[zen_breadcrumb_trailing]  = 0
+settings[zen_breadcrumb_title]     = 0
+settings[zen_skip_link_anchor]     = main-menu
+settings[zen_skip_link_text]       = Jump to navigation
+settings[zen_html5_respond_meta][] = respond
+settings[zen_html5_respond_meta][] = html5
+settings[zen_html5_respond_meta][] = meta
+settings[zen_rebuild_registry]     = 1
+settings[zen_wireframes]           = 0
+
+; To make this sub-theme an admin theme with shortcut links next to titles,
+; uncomment the line below.
+
+;settings[shortcut_module_link]    = 1
+
+; To add a Panels layout (which can also be used by Display Suite), uncomment
+; the line below and see the documentation at: https://drupal.org/node/495654
+;plugins[panels][layouts] = panels-layouts
 
 
-settings[alpha_region_featured_content_equal_height_container] = ''
-settings[alpha_region_featured_content_equal_height_element] = ''
-settings[alpha_region_featured_content_force] = ''
-settings[alpha_region_featured_content_zone] = 'featured_content'
-settings[alpha_region_featured_content_prefix] = ''
-settings[alpha_region_featured_content_columns] = '12'
-settings[alpha_region_featured_content_suffix] = ''
-settings[alpha_region_featured_content_weight] = '1'
-settings[alpha_region_featured_content_css] = ''
+; For Picture 2.x
+breakpoints[desktop] = (min-width: 890px)
+breakpoints[tablet] = (min-width: 700px)
+breakpoints[mobile] = (min-width: 0px)
 
-
-settings[alpha_region_sidebar_first_equal_height_container] = ''
-settings[alpha_region_sidebar_first_equal_height_element] = ''
-settings[alpha_region_sidebar_first_force] = ''
-settings[alpha_region_sidebar_first_zone] = 'content'
-settings[alpha_region_sidebar_first_prefix] = ''
-settings[alpha_region_sidebar_first_columns] = '3'
-settings[alpha_region_sidebar_first_suffix] = ''
-settings[alpha_region_sidebar_first_weight] = '1'
-settings[alpha_region_sidebar_first_css] = ''
-settings[alpha_region_sidebar_second_equal_height_container] = ''
-settings[alpha_region_sidebar_second_equal_height_element] = ''
-settings[alpha_region_sidebar_second_force] = ''
-settings[alpha_region_sidebar_second_zone] = 'content'
-settings[alpha_region_sidebar_second_prefix] = ''
-settings[alpha_region_sidebar_second_columns] = '3'
-settings[alpha_region_sidebar_second_suffix] = ''
-settings[alpha_region_sidebar_second_weight] = '3'
-settings[alpha_region_sidebar_second_css] = ''
-
-settings[alpha_region_above_footer_equal_height_container] = ''
-settings[alpha_region_above_footer_equal_height_element] = ''
-settings[alpha_region_above_footer_force] = ''
-settings[alpha_region_above_footer_zone] = 'above_footer'
-settings[alpha_region_above_footer_prefix] = ''
-settings[alpha_region_above_footer_columns] = '12'
-settings[alpha_region_above_footer_suffix] = ''
-settings[alpha_region_above_footer_weight] = '1'
-settings[alpha_region_above_footer_css] = ''
-
-
-settings[alpha_region_footer_first_equal_height_container] = ''
-settings[alpha_region_footer_first_equal_height_element] = ''
-settings[alpha_region_footer_first_force] = ''
-settings[alpha_region_footer_first_zone] = 'footer'
-settings[alpha_region_footer_first_prefix] = ''
-settings[alpha_region_footer_first_columns] = '12'
-settings[alpha_region_footer_first_suffix] = ''
-settings[alpha_region_footer_first_weight] = '1'
-settings[alpha_region_footer_first_css] = ''
-settings[alpha_region_footer_second_equal_height_container] = ''
-settings[alpha_region_footer_second_equal_height_element] = ''
-settings[alpha_region_footer_second_force] = ''
-settings[alpha_region_footer_second_zone] = 'footer'
-settings[alpha_region_footer_second_prefix] = ''
-settings[alpha_region_footer_second_columns] = '12'
-settings[alpha_region_footer_second_suffix] = ''
-settings[alpha_region_footer_second_weight] = '2'
-settings[alpha_region_footer_second_css] = ''
-
-
-settings[alpha_region_copyright_equal_height_container] = ''
-settings[alpha_region_copyright_equal_height_element] = ''
-settings[alpha_region_copyright_force] = ''
-settings[alpha_region_copyright_zone] = 'footer_second'
-settings[alpha_region_copyright_prefix] = ''
-settings[alpha_region_copyright_columns] = '12'
-settings[alpha_region_copyright_suffix] = ''
-settings[alpha_region_copyright_weight] = '1'
-settings[alpha_region_copyright_css] = ''
-
-
-version = '1.x'
+multipliers[desktop][] = 1x
+multipliers[desktop][] = 2x
+multipliers[tablet][] = 1x
+multipliers[tablet][] = 2x
+multipliers[mobile][] = 1x
+multipliers[mobile][] = 2x

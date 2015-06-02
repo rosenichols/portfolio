@@ -1,0 +1,227 @@
+/* Portfolio */
+
+.node-project.view-mode-full {
+  h2 {
+    @include underline-h2(#d0d0d0);
+  }
+  .field-type-text-long,
+  .field-type-text-with-summary  {
+    @include breakpoint($tablet) {
+      font-size: 1.5em;
+    }
+  }
+  .field-type-text-long.field-label-above {
+    margin-bottom: 1.5em;
+    h2 {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .field-name-field-company-info {
+    font-size: 1.75em;
+    border: 0;
+    padding-left: 0;
+    margin-left: 0;
+    color: #2c2c2c;
+    margin-bottom: 2em;
+  }
+}
+
+#block-rose-project-projects {
+  .line {
+    margin-bottom: 2em;
+    clear: both;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .tid-wrapper {
+    margin-bottom: 2em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.node-project.node-teaser {
+  margin-bottom: 2em;
+  @include breakpoint($tablet) {
+    margin-bottom: 0;
+  }
+  @include gallery(4 of 8);
+  @include breakpoint($tablet) {
+    @include gallery(4 of 12);
+  }
+  @include breakpoint($desktop) {
+    @include gallery(4 of 16);
+  }
+  .project-teaser-img-wrap {
+    position: relative;
+    border: 2px solid #d7d9d1;
+    margin-bottom: 1em;
+    display: block;
+    img {
+      display: block;
+    }
+    &:hover {
+      @include breakpoint($tablet) {
+        border-color: #9CC452;
+        transition: border-color 0.5s ease;
+      }
+    }
+  }
+  .project-teaser-title {
+    color: #444444;
+    font-size: 1.5em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    padding: 0.5em 0.5em 0.334em 0.5em;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.85);
+    font-family: $surface;
+  }
+  span {
+    display: block;
+  }
+}
+
+.portfolio-group-heading {
+  clear: both;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2em;
+  color: #444;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-size: 1.75em;
+    @include breakpoint($tablet) {
+      font-size: 2.5em;
+    }
+  }
+  span {
+    color: #848484;
+    margin-top: 0.111em;
+    margin-bottom: 0;
+    display: block;
+    font-size: 1em;
+    @include breakpoint($tablet) {
+      font-size: 1.25em;
+    }
+  }
+}
+
+.region-sidebar-second {
+  margin-bottom: 5em;
+  font-size: 1.125em;
+  .project-visit-site {
+    margin-bottom: 2rem;
+    color: #ffffff;
+    background: #b3ac4e;
+    text-align: center;
+    display: block;
+    padding: 0.406em 1em;
+    font-size: 2em;
+    font-family: $surface;
+  }
+  .project-sidebar {
+    border: 3px solid #ccc;
+    margin-bottom: 2em;
+    padding: 1em;
+    &.get-in-touch {
+      margin-bottom: 0;
+    }
+    ul {
+      margin: 0;
+    }
+    .heading {
+      padding-bottom: 6px;
+      border-left: 0;
+      border-right: 0;
+      text-align: center;
+    }
+    h3 {
+      margin: 0;
+      line-height: 1em;
+      text-align: left;
+      font-family: $surface;
+      font-size: 1.75em;
+      color: #6C6C6C;
+    }
+    .content {
+      padding-top: 0.25em;
+      line-height: 1.389em;
+    }
+  }
+}
+
+.project-sidebar.summary {
+  .content {
+    padding-bottom: 1em;
+  }
+  .contrib {
+    margin-bottom: 0.5em;
+    padding-left: 2em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    h4 {
+      font-size: 1.25em;
+      margin: 0;
+    }
+    .content {
+      padding-bottom: 0.25em;
+    }
+    &.no-contrib {
+      background-image: url(../img/contrib-red-cross.png);
+    }
+    &.some-contrib,
+    &.main-contrib {
+      background-image: url(../img/contrib-green-tick.png);
+    }
+    background-size: 24px;
+    background-position: 0 0.25em;
+    background-repeat: no-repeat;
+  }
+
+}
+
+$project-pages: eagle-plant #b4a90b #e5e3c7,
+                eqalis #a27aa5 #e7d9e5,
+                group-157 #7d93af #c4defb,
+                miheart #519ef5 #d8eafe,
+                interaction-descign-portfolio #ac5f86 #ddc5d6,
+                ittw-pal #97c8d6 #d4f0f7,
+                lost-toys #a4c1d1 #e3f2f9,
+                hillfield-aviaries #c597a7 #d0e0be,
+                pact-analysis #7f7b92 #cdcad9,
+                nccpe #2974af #e2c4d2,
+                lightworx-media #49acdd #c3e3f1,
+                edf-energy #1065b5 #a9bfd4;
+
+.page {
+  @each $project in $project-pages {
+    &.#{nth($project, 1)} {
+      .region-sidebar-second {
+        .project-visit-site {
+          background: nth($project, 2);
+        }
+        .project-sidebar {
+          border-color: nth($project, 3);
+        }
+      }
+      .node-project.view-mode-full .field h2 {
+        border-color: nth($project, 2);
+      }
+    }
+  }
+}
+
+.field-name-field-project-banner {
+  border: 3px solid #d0d0d0;
+  margin-bottom: 2em;
+}

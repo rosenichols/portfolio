@@ -1,18 +1,26 @@
-@import "modules/drupal";
+/* Import the Susy grid system */
+@import "breakpoint";
+@import "susy";
 
-@import "partials/defaults/fonts";
-@import "partials/common";
-@import "partials/defaults/tabs";
-@import "partials/defaults/messages";
+/* Import helpers */
+@import "helpers/fonts";
+@import "helpers/mixins";
+@import "helpers/init";
+@import "helpers/normalize";
 
-@import "partials/blocks";
+/* Our susy grid settings */
+@import "helpers/grid";
+
+@import "helpers/print";
+@import "helpers/tabs";
+@import "helpers/messages";
+
+/* Import partials */
+@import "partials/page";
 @import "partials/header";
-@import "partials/home";
-@import "partials/about";
-@import "partials/projects";
-@import "partials/contact";
-@import "partials/cv";
+@import "partials/navigation";
+@import "partials/banner";
 @import "partials/footer";
-@import "partials/maintenance";
-
-//@import "partials/colorbox";
+@import "partials/promos";
+@import "partials/contact";
+@import "partials/portfolio";

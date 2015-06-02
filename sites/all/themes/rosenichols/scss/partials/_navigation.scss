@@ -1,0 +1,81 @@
+// Navigation
+
+.navigation {
+  position: relative;
+  min-height: 3em;
+  position: absolute;
+  width: 100%;
+  //top: 0;
+  z-index: 1;
+  nav {
+    background: #f2f2f2;
+    border-top: 2px solid #d0d0d0;
+    border-bottom: 2px solid #d0d0d0;
+  }
+  ul {
+    text-align: center;
+    padding: 0.333em;
+    margin: 0;
+    font-family: $accent-font;
+    font-size: 1.688em;
+    @include breakpoint($tablet) {
+      letter-spacing: 0.075em;
+    }
+    li {
+      display: inline;
+      &:after {
+        content: '•';
+        padding-left: 0.5em;
+        padding-right: 0.25em;
+        color: #4c4d4f;
+      }
+      &.last:after {
+        content: '';
+        padding: inherit;
+      }
+    }
+  }
+  a {
+    color: #4c4d4f;
+    &.active,
+    &.active-trail {
+      color: #3a3a3a;
+    }
+    &:hover,
+    &:focus {
+      @include breakpoint($tablet) {
+        border-bottom: 2px solid;
+      }
+    }
+  }
+}
+
+$nav-colours: front rgb(246, 248, 235) rgba(246, 248, 235, 0.5) rgb(215, 175, 116) rgba(215, 175, 116, 0.5),
+              section-about rgb(232, 250, 248) rgba(232, 250, 248, 0.5) rgb(116, 214, 201) rgba(116, 214, 201, 0.5),
+              section-contact rgb(251, 245, 232) rgba(251, 245, 232, 0.5) rgb(165, 214, 116) rgba(165, 214, 116, 0.5),
+              section-portfolio rgb(246, 248, 235) rgba(246, 248, 235, 0.5) rgb(156, 196, 82) rgba(156, 196, 82, 0.75);
+
+@each $colour in $nav-colours {
+  .#{nth($colour, 1)} {
+    .navigation nav {
+      background: nth($colour, 2);
+      background: nth($colour, 3);
+      border-top-color: nth($colour, 4);
+      border-top-color: nth($colour, 4);
+      border-bottom-color: nth($colour, 5);
+      border-bottom-color: nth($colour, 5);
+    }
+  }
+}
+
+.section-portfolio {
+  &.sidebar-second {
+    .navigation nav {
+      // Represents an inner page, don't actually care about the sidebar.
+      border-top-color: #d0d0d0;
+      border-bottom-color: #d0d0d0;
+      background: #f2f2f2;
+    }
+  }
+}
+

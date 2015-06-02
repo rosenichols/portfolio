@@ -1,155 +1,162 @@
 /* Contact */
 
-$grey: #ececec;
-
-
-#block-rose-contact-intro {
-	margin-bottom: 4em;
-	.contact-info div {
-		position: relative;
-		width: 31.66%;
-		margin-right: 2.5%;
-		font-family: $josefin;
-		font-size: 1.333em;
-		text-align: center;
-		line-height: 1em;
-		border: 1px solid #eff3de;
-		float: left;
-		padding: 3em 1em 1.5em 1em;
-		&.email {
-			background: url('../images/contact-icons.png') center 0 no-repeat #f5f5f5;
-		}
-		&.linkedin {
-			background: url('../images/contact-icons.png') center -108px no-repeat #f5f5f5;
-		}
-		&.twitter {
-			background: url('../images/contact-icons.png') center -226px no-repeat #f5f5f5;
-		}
-		&.last {
-			margin-right: 0;
-			margin-bottom: 0;
-		}
-		@include respond(mobile) {
-			width: 100%;
-			margin-right: 0;
-			margin-bottom: 1em;
-			float: none;
-		}
-		a {
-			color: #444;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			padding: 3em 1em 0.5em 1em;
-			&.email-address {
-				@include respond(tablet) {
-					font-size: 0.85em;
-					padding-top: 3.59em;
-				}
-			}
-		}
-	}
+#rose-contact-message-form {
+  margin-bottom: 0;
+  // Be gone, grippie & required asterisks.
+  .grippie,
+  .form-required {
+    display: none;
+  }
+  .form-item {
+    label {
+      font-weight: normal;
+      color: #343434;
+      font-family: $questa;
+      line-height: 1em;
+      margin-bottom: 0.5em;
+      font-size: 1.5em;
+      @include breakpoint($tablet) {
+        @include span(7 of 12);
+        text-align: right;
+        margin-bottom: 0;
+        font-size: 1.875em;
+      }
+      @include breakpoint($tablet) {
+        @include span(5 of 16);
+      }
+      .extra {
+        display: block;
+        font-size: 0.625em;
+        color: #6d6d6d;
+        line-height: 1em;
+        margin-top: 0.125em;
+        @include breakpoint($tablet) {
+          font-size: 0.5em;
+        }
+      }
+    }
+    input {
+      @include breakpoint($tablet) {
+        @include span(6 of 12 last);
+        float: left;
+      }
+      @include breakpoint($desktop) {
+        @include span(5 of 16 last);
+        float: left;
+      }
+    }
+    input,
+    textarea {
+      font-size: 1.625em;
+      background-color: #d5e4e9;
+      border: 3px solid white;
+      color: #25327b;
+      padding: 0.154em 0.25em;
+      margin-top: 0.038em;
+    }
+    textarea {
+      @include breakpoint($tablet) {
+        @include span(7 of 12 last);
+        float: left;
+      }
+      @include breakpoint($tablet) {
+        @include span(8 of 16 last);
+        float: left;
+      }
+    }
+    textarea {
+      min-height: 7em;
+    }
+  }
 }
 
-#rose-message-form {
-	.form-item {
-		input.error,
-		textarea.error,
-		select.error {
-			border: inherit;
-			
-		}
-		input.error {
-			border-bottom: 2px solid #c68998;
-		}
-		textarea.error {
-			background-image: url('../images/textarea-lines-error.png');
-		}
-	}
-	input,
-	textarea {
-		background: none;
-		border: 0;
-		@include box-shadow(none);
-		@include border-radius(0);
-		@include text-shadow(none);
-		font-size: 27px;
-		line-height: 28px;
-		font-weight: 400;
-		font-family: $carrois;
-		height: auto;
-		margin: 0;
-		@include placeholder {
-			color: #d2d2d2;
-		}
-	}
-	textarea {
-		background: url('../images/textarea-lines.png') 0 0 repeat;
-		text-indent: 8.75em;
-		color: #8f6eb4;
-		line-height: 1.852em;
-		font-family: inherit;
-	}
-	input {
-		border-bottom: 2px solid #e5e6da;
-		&.form-submit {
-			border: 0;
-			font-family: $carrois-sc;
-			text-transform: lowercase;
-			color: #fff;
-			font-size: 1.25em;
-			padding: 0.5em 3.75em 0.5em 1.25em;
-			background: url('/sites/all/themes/rosenichols/images/paper-aeroplane.png') 92% center no-repeat #b3ac4e;
-		}
-	}
-	.form-type-textfield input {
-		color: #839441;
-		width: 100%;
-		line-height: 1em;
-	}
-	.name-wrapper {
-		height: 3em;
-		margin-bottom: 1em;
-		span {
-			padding-top: 0.1em;
-		}
-	}
-	span {
-		float: left;
-		font-size: 27px;
-	}
-	.message-wrapper {
-		position: relative;
-		clear: both;
-		line-height: 2em;
-		margin-bottom: 2em;
-		span {
-			padding-top: 0.333em;
-		}
-	}
-	.submit-wrapper {
-		width: 100%;
-		clear: both;
-		text-align: right;
-	}
-	.message-intro {
-		position: absolute;
-	}
-	label {
-		display: none;
-	}
-	.resizable-textarea .grippie {
-		display: none;
-	}
-	.form-type-textfield {
-		display: inline;
-		width: 15em;
-		float: left;
-		margin: 0 8px;
-		clear: right;
-	}
+.form-wrapper {
+  clear: both;
+  margin-bottom: 1em;
+  min-height: 2.875em;
 }
 
+.submit-wrapper {
+  clear: both;
+  margin-bottom: 0;
+  text-align: right;
+  @include breakpoint($tablet) {
+    @include span(10 of 12);
+    min-height: inherit;
+    padding-top: 1.5em;
+    padding-right: 1em;
+  }
+  @include breakpoint($desktop) {
+    padding-right: 0;
+    @include span(13 of 16);
+  }
+}
 
+.message-wrapper {
+  padding-top: 1em;
+}
+
+.form-submit {
+  background: #f7f7f7;
+  color: #daac3c;
+  border: 0;
+  font-family: $accent-font;
+  font-size: 2.188em;
+  padding: 0.25em 1.25em;
+  border: 1px solid #fff;
+  transition: all 0.5s ease;
+  &:hover {
+    @include breakpoint($tablet) {
+      color: #25327b;
+      border: 1px solid;
+    }
+  }
+}
+
+.section-contact {
+  .field-name-body {
+    font-family: $questa;
+    .btn {
+      color: #daac3c;
+      background: #f7f7f7;
+      font-family: $accent-font;
+      padding: 0.5em 1em;
+      font-size: 1.125em;
+      position: relative;
+      top: 0.125em;
+    }
+    h2 {
+      color: #929292;
+      margin: 0;
+      line-height: 1.25em;
+      font-size: 1.5em;
+      border-bottom: 0;
+      padding-bottom: 0;
+      @include breakpoint($tablet) {
+        font-size: 1.5em;
+      }
+      @include breakpoint($wide) {
+        font-size: 1.675em;
+      }
+      + span {
+        line-height: 1.125em;
+        color: #c1c1c1;
+        font-size: 1.5em;
+        @include breakpoint($tablet) {
+          font-size: 1.5em;
+        }
+        @include breakpoint($wide) {
+          font-size: 1.667em;
+        }
+      }
+    }
+    hr {
+      border: 2px solid #f7f7f7;
+      margin-bottom: 4px;
+    }
+    .btn-wrapper {
+      text-align: right;
+      margin-bottom: 2em;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+name = Rose Nichols Contact
+description = Contains functionality for a contact form.
+package = Rose Nichols
+core = 7.x
+
+files[] = rose_contact.blocks.inc
+files[] = rose_contact.form.inc
+files[] = rose_contact.contact.inc
+files[] = rose_contact.module

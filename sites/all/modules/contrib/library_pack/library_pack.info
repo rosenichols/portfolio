@@ -1,5 +1,0 @@
-name = Library Pack
-description = "Libraries"
-core = 7.x
-configure = admin/appearance/libraries
-dependencies[] = libraries

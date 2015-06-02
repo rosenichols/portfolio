@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Custom module for this site.
+ */
+
+/**
+ * Implements hook_init().
+ */
+function rose_init() {
+  // Load the includes for the module.
+  module_load_include('inc', 'rose', 'rose.blocks');
+}

@@ -1,0 +1,235 @@
+// Promos
+
+.region-promo {
+  margin-top: 3em;
+  position: relative;
+  padding-bottom: 43px;
+  > div {
+    position: relative;
+    padding-bottom: 2em;
+    @include breakpoint($tablet) {
+      padding-bottom: 2.5em;
+    }
+  }
+}
+
+.node-promo {
+  position: relative;
+  padding-top: 1em;
+  @include breakpoint($desktop) {
+    padding-top: 5em;
+  }
+  header {
+    font-family: $questa;
+    background: #fff;
+    border: 2px solid #e6c18d;
+    color: #a0a0a0;
+    text-align: center;
+    padding: 1em 0.5em;
+    line-height: 1em;
+    width: 100%;
+    margin-bottom: 2em;
+    margin-top: 0.25em;
+    @include breakpoint($desktop) {
+      position: absolute;
+      top: -1.75em;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+  h2 {
+    margin: 0;
+    line-height: 1em;
+    font-size: 1.5em;
+    @include breakpoint($tablet) {
+      font-size: 2.25em;
+    }
+    @include breakpoint($desktop) {
+      font-size: 2.5em;
+    }
+  }
+}
+
+.front .node-promo {
+  padding-top: 2em;
+  @include breakpoint($desktop) {
+    padding-top: 5em;
+  }
+}
+
+.node-promo.two-lines {
+  @include breakpoint($desktop) {
+    padding-top: 6em;
+  }
+  header {
+    @include breakpoint($desktop) {
+      top: -3em;
+      padding: 0.75em;
+    }
+    span {
+      font-size: 1.25em;
+      line-height: 1.125em;
+      @include breakpoint($tablet) {
+        font-size: 1.75em;
+      }
+    }
+  }
+  h2 {
+    margin-bottom: 0.25em;
+  }
+  .node-title {
+    line-height: 1.25em;
+  }
+}
+
+.front .region-promo {
+  background: url('/sites/all/themes/rosenichols/img/white-dot-border.png');
+  background-position: center 6px;
+  background-repeat: repeat-x;
+}
+
+.section-contact .region-promo:before {
+  content: ' ';
+  height: 1em;
+  background: url('../img/ltblue-dot-border.png') top center repeat-x transparent;
+  position: absolute;
+  top: -1.75em;
+  width: 100%;
+}
+
+.section-about {
+  .node-promo header {
+    @include breakpoint($desktop) {
+      top: -2.75em;
+    }
+  }
+  .region-promo {
+    &:before {
+      content: ' ';
+      height: 1em;
+      background: url('../img/ltgreen-dot-border.png') top center repeat-x transparent;
+      position: absolute;
+      top: -1.75em;
+      width: 100%;
+    }
+  }
+}
+
+.front {
+  .field-name-field-promo-text {
+    .way {
+      margin-bottom: 1em;
+      &.last {
+        margin-bottom: 0;
+      }
+    }
+    h3 {
+      font-size: 1em;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    span {
+      display: block;
+    }
+  }
+}
+
+.region-promo .block-rose {
+  position: relative;
+  background: #343434;
+  font-family: $accent-font;
+  font-size: 1em;
+  @include breakpoint($tablet) {
+    font-size: 1.25em;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
+  .content {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    min-height: 5em;
+    @include breakpoint($desktop) {
+      min-height: 7em;
+    }
+  }
+  .block-title,
+  footer {
+    background: #2c2c2c;
+    color: #f5f5f5;
+    padding: 0.4em 0.467em;
+  }
+  footer {
+    text-align: right;
+    display: none;
+    @include breakpoint($desktop) {
+      display: block;
+    }
+  }
+  .block-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.25em;
+  }
+  footer a {
+    color: #fff;
+  }
+  span {
+    display: block;
+  }
+}
+
+#block-rose-social-lastfm {
+  .album-art {
+    position: absolute;
+    left: 0.25em;
+  }
+  .content {
+    padding-left: 84px;
+  }
+  .track-name {
+    color: #daac3c;
+  }
+  .track-artist {
+    color: #f4f4f4;
+  }
+}
+
+#block-rose-social-delicious {
+  .article-title a {
+    color: #daac3c;
+  }
+  .notes {
+    color: #f4f4f4;
+  }
+}
+
+#block-rose-social-tweets {
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  .views-field-text {
+    color: #d0d0d0;
+  }
+  .views-field-created-time {
+    display: block;
+    span {
+      color: #898989;
+      font-weight: normal;
+      em {
+        font-style: normal;
+      }
+    }
+  }
+}
+
+.field-name-field-promo-text ul {
+  margin-bottom: 0;
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
