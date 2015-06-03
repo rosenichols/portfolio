@@ -38,7 +38,7 @@ function rosenichols_preprocess_html(&$variables) {
     foreach ($nodes as $key => $value) {
       if (is_numeric($key)) {
         if ($value['#bundle'] == 'page') {
-          if (!empty($value['field_project_banner'])) {
+          if (!empty($value['field_banner'])) {
             $variables['classes_array'][] = 'body-has-banner';
           }
         }
