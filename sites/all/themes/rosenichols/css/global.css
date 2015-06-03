@@ -256,7 +256,7 @@ table { /* Remove most spacing between table cells. */ border-collapse: collapse
 #menu-toggle { text-transform: lowercase; font-family: carrois_gothic_sc; color: white; border: 1px solid #eff3de; padding: 0.25em 1.5em 0.333em 1.5em; display: inline-block; line-height: 1em; background: none; font-weight: 400; outline: none; margin: 0 auto 20px auto; border-radius: 0; text-shadow: none; font-size: 1em; min-width: 100px; display: none; }
 #menu-toggle.open { background: #94A749; }
 
-.navigation { position: relative; min-height: 3em; position: absolute; width: 100%; z-index: 1; }
+.navigation { position: relative; min-height: 3em; width: 100%; z-index: 1; }
 .navigation nav { background: #f2f2f2; border-top: 2px solid #d0d0d0; border-bottom: 2px solid #d0d0d0; }
 .navigation ul { text-align: center; padding: 0.333em; margin: 0; font-family: "surfacemedium", sans-serif; font-size: 1.688em; }
 @media (min-width: 700px) { .navigation ul { letter-spacing: 0.075em; } }
@@ -266,6 +266,8 @@ table { /* Remove most spacing between table cells. */ border-collapse: collapse
 .navigation a { color: #4c4d4f; }
 .navigation a.active, .navigation a.active-trail { color: #3a3a3a; }
 @media (min-width: 700px) { .navigation a:hover, .navigation a:focus { border-bottom: 2px solid; } }
+
+.body-has-banner .navigation { position: absolute; }
 
 .front .navigation nav { background: #f6f8eb; background: rgba(246, 248, 235, 0.5); border-top-color: #d7af74; border-top-color: #d7af74; border-bottom-color: rgba(215, 175, 116, 0.5); border-bottom-color: rgba(215, 175, 116, 0.5); }
 

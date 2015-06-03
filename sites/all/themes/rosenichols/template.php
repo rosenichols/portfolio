@@ -27,6 +27,28 @@ function rosenichols_preprocess_maintenance_page(&$variables, $hook) {
 // */
 
 /**
+ * Override or insert variables into the html template.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ */
+function rosenichols_preprocess_html(&$variables) {
+  $nodes = $variables['page']['content']['system_main']['nodes'];
+  if (!empty($nodes)) {
+    foreach ($nodes as $key => $value) {
+      if (is_numeric($key)) {
+        if ($value['#bundle'] == 'page') {
+          if (!empty($value['field_project_banner'])) {
+            $variables['classes_array'][] = 'body-has-banner';
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**
  * Override or insert variables into the page templates.
  *
  * @param $variables
