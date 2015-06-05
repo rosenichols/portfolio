@@ -33,13 +33,15 @@ function rosenichols_preprocess_maintenance_page(&$variables, $hook) {
  *   An array of variables to pass to the theme template.
  */
 function rosenichols_preprocess_html(&$variables) {
-  $nodes = $variables['page']['content']['system_main']['nodes'];
-  if (!empty($nodes)) {
-    foreach ($nodes as $key => $value) {
-      if (is_numeric($key)) {
-        if ($value['#bundle'] == 'page') {
-          if (!empty($value['field_banner'])) {
-            $variables['classes_array'][] = 'body-has-banner';
+  if (!empty($variables['page']['content']['system_main']['nodes'])) {
+    $nodes = $variables['page']['content']['system_main']['nodes'];
+    if (!empty($nodes)) {
+      foreach ($nodes as $key => $value) {
+        if (is_numeric($key)) {
+          if ($value['#bundle'] == 'page') {
+            if (!empty($value['field_banner'])) {
+              $variables['classes_array'][] = 'body-has-banner';
+            }
           }
         }
       }
