@@ -105,7 +105,7 @@ function rose_contact_message_form_submit($form, &$form_state) {
   global $user;
 
   $node = new stdClass();
-  $node->type = 'message';
+  $node->type = 'contact_submission';
   node_object_prepare($node);
   $node->title = 'Message from ' . $form_state['values']['name'];
   $node->uid = $user->uid;
