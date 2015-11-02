@@ -75,7 +75,7 @@
 </div>
 <footer id="footer" class="footer">
   <div class="copyright-terms">
-    <span class="copyright">© 2014-2015 Rose Nichols</span>
+    <span class="copyright">© 2014-<?php print date('Y'); ?> Rose Nichols</span>
     <span class="terms">
       <?php print $contact_link ?> <a href="/terms">Privacy &amp; Terms</a>
     </span>
