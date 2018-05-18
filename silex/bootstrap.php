@@ -6,7 +6,6 @@ use Silex\Application;
 use Silex\Provider\FormServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\SessionServiceProvider;
-use Silex\Provider\DoctrineServiceProvider;
 use Symfony\Bridge\Twig\Extension\TranslationExtension;
 use Symfony\Component\Translation\Translator;
 
@@ -21,8 +20,6 @@ $app->register(new TwigServiceProvider(), [
   'twig.path' => __DIR__ . '/templates',
   'twig.options' => [],
 ]);
-
-$app->register(new DoctrineServiceProvider(), $settings['db_client']);
 
 // Register and start a session:
 $app->register(new SessionServiceProvider());
