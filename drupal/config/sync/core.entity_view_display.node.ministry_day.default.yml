@@ -1,0 +1,128 @@
+uuid: 739699d1-e009-4fa0-be57-e9badc5a5736
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ministry_day.field_bibles
+    - field.field.node.ministry_day.field_books
+    - field.field.node.ministry_day.field_brochures
+    - field.field.node.ministry_day.field_date
+    - field.field.node.ministry_day.field_hours
+    - field.field.node.ministry_day.field_magazines
+    - field.field.node.ministry_day.field_notes
+    - field.field.node.ministry_day.field_return_visits
+    - field.field.node.ministry_day.field_studies
+    - field.field.node.ministry_day.field_tracts
+    - field.field.node.ministry_day.field_videos
+    - node.type.ministry_day
+  module:
+    - datetime
+    - user
+id: node.ministry_day.default
+targetEntityType: node
+bundle: ministry_day
+mode: default
+content:
+  field_bibles:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_books:
+    weight: 105
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_brochures:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_date:
+    weight: 108
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_hours:
+    weight: 112
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_magazines:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_notes:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_return_visits:
+    weight: 109
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_studies:
+    weight: 110
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_tracts:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_videos:
+    weight: 111
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

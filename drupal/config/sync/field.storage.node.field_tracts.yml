@@ -1,0 +1,20 @@
+uuid: 9a917526-3dfc-4ad7-9472-c465409fb207
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tracts
+field_name: field_tracts
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

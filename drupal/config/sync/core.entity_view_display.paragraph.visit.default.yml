@@ -1,0 +1,41 @@
+uuid: a3d1fb03-8080-4dc8-8558-45192f91a32d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.visit.field_date
+    - field.field.paragraph.visit.field_details
+    - field.field.paragraph.visit.field_next_steps
+    - paragraphs.paragraphs_type.visit
+  module:
+    - datetime
+    - text
+id: paragraph.visit.default
+targetEntityType: paragraph
+bundle: visit
+mode: default
+content:
+  field_date:
+    weight: 0
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_details:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_next_steps:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 45d2b156-e3bf-4818-bcea-07b145851940
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brochures
+    - node.type.ministry_day
+id: node.ministry_day.field_brochures
+field_name: field_brochures
+entity_type: node
+bundle: ministry_day
+label: Brochures
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

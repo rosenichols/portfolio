@@ -1,26 +1,16 @@
-# Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
-
-# Ignore paths that contain user-generated content.
-sites/*/files
-sites/*/private
-
-# Ignore Mac files
+.idea
 .DS_Store
-
-# Ignore the dev enviroment files
-dev
-staging
-
-# Ignore anything even vaguely DB config related
-db_config.php
-db_config.inc.php
-
-.ftpquota
-
-# Capistrano
-Capfile
-config
-
-# SASS
+drupal/sites/default/settings.php
+drupal/sites/default/settings.*.php
+drupal/web/vendor/*
+silex/settings.php
+silex/settings_taxonomy.php
+silex/settings.*.php
+silex/vendor/*
+silex/web/css/*
 .sass-cache
+silex/twig_cache/*
+silex/web/sessions
+node_modules
+npm-debug.log
+__clear_opcache_*.php

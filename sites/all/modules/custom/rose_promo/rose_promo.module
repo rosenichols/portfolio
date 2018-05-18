@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Rose Nichols Promo feature.
- */
-
-include_once 'rose_promo.features.inc';

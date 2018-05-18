@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    FORM ELEMENTS
+\*------------------------------------*/
+
+.text-element {
+  width: 100%;
+  border: 1px solid #c5d387;
+  outline-color: #c6d684;
+  border-radius: 0;
+  @media #{$desktop-narrow} {
+    max-width: 300px;
+  }
+}
+
+.select-element {
+  font-size: 0.875rem;
+  width: 100%;
+  height: 3em;
+  @media #{$desktop-narrow} {
+    padding: 0.5em;
+    width: auto;
+    min-width: 260px;
+  }
+}
+
+.textarea-element {
+  border: 1px solid #c5d387;
+  outline-color: #c6d684;
+  width: 100%;
+  height: 10em;
+  border-radius: 0;
+}
+
+.random-topic-generator {
+  position: relative;
+}
+
+.rtg-widget {
+  display: flex;
+  flex-direction: column;
+  @media #{$desktop-narrow} {
+    flex-direction: row;
+  }
+}
+
+.rtg-show {
+  cursor: pointer;
+  border: 0;
+  background: 0;
+}
+
+.rtg-hide {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.rtg-input {
+  margin-bottom: 1em;
+  @media #{$desktop-narrow} {
+    width: 25%;
+    margin-right: 0.25em;
+    margin-bottom: 0;
+  }
+}

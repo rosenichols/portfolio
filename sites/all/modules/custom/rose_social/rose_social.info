@@ -1,6 +1,0 @@
-name = Rose Nichols Social
-description = Contains social media related blocks.
-package = Rose Nichols
-core = 7.x
-
-files[] = rose_social.blocks.inc

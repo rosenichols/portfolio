@@ -1,0 +1,20 @@
+uuid: 9da83b6c-c7a4-426c-8915-a4b6ab12ba62
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_bibles
+field_name: field_bibles
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

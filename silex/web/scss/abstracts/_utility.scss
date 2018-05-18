@@ -1,0 +1,261 @@
+/*------------------------------------*\
+    UTILITY
+\*------------------------------------*/
+
+.clearfix {
+  @include clearfix;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+
+.full-width {
+  width: 100%;
+}
+
+.list-circle > li {
+  list-style: circle;
+}
+
+/*------------------------------------*\
+    Display
+\*------------------------------------*/
+
+$display-types: (
+  'block',
+  'inline-block',
+  'flex',
+  'inline-flex'
+);
+
+.hidden {
+  display: none;
+}
+
+@each $display-type in $display-types {
+  .#{$display-type} {
+    display: #{$display-type};
+  }
+}
+
+
+/*------------------------------------*\
+    Text size
+\*------------------------------------*/
+
+$text-sizes: (
+  's': '1em',
+  'sm': '1.25em',
+  'm': '1.5em',
+  'l': '2em',
+  'xl': '2.25em',
+  '2xl': '2.75em'
+);
+
+@each $identifier, $size in $text-sizes {
+  .text-#{$identifier} {
+    font-size: #{$size};
+  }
+}
+
+
+/*------------------------------------*\
+    Text transform
+\*------------------------------------*/
+
+$text-transform: (
+  'upper': 'uppercase',
+  'lower': 'lowercase'
+);
+
+@each $identifier, $transform in $text-transform {
+  .text-#{$identifier} {
+    text-transform: #{$transform};
+  }
+}
+
+
+/*------------------------------------*\
+    Letter spacing
+\*------------------------------------*/
+
+$letter-spacing: (
+  's': '0.025em',
+  'm': '0.05em',
+  'l': '0.075em'
+);
+
+@each $identifier, $size in $letter-spacing {
+  .letter-#{$identifier} {
+    letter-spacing: #{$size};
+  }
+}
+
+
+/*------------------------------------*\
+    Font family
+\*------------------------------------*/
+
+$font-families: (
+  'dosis': $dosis,
+  'open-sans': $open-sans,
+  'mono': $mono
+);
+
+@each $identifier, $font-family in $font-families {
+  .font-#{$identifier} {
+    font-family: #{$font-family};
+  }
+}
+
+
+/*------------------------------------*\
+    Font color & background color
+\*------------------------------------*/
+
+$colors: (
+  'white': $white,
+  'light-cyan': $light-cyan,
+  'outer-space': $outer-space,
+  'key-lime': $key-lime,
+  'ruber': $ruber,
+  'begonia': $begonia,
+  'cherry': $cherry,
+  'black': $black
+);
+
+@each $name, $hex in $colors {
+  .color-#{$name} {
+    color: #{$hex};
+  }
+  .bg-#{$name} {
+    background-color: #{$hex};
+  }
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+/*------------------------------------*\
+    Text alignment
+\*------------------------------------*/
+
+$alignment-types: (
+  'left',
+  'center',
+  'right',
+  'justify'
+);
+
+@each $alignment-type in $alignment-types {
+  .text-#{$alignment-type} {
+    text-align: #{$alignment-type};
+  }
+}
+
+
+/*------------------------------------*\
+    Line heighht
+\*------------------------------------*/
+
+$line-heights: (
+  'reset': '1em',
+  'tight': '1.125em'
+);
+
+@each $identifier, $value in $line-heights {
+  .line-#{$identifier} {
+    line-height: #{$value};
+  }
+}
+
+
+/*------------------------------------*\
+    Vertical alignment
+\*------------------------------------*/
+
+$vertical-alignment-types: (
+  'top',
+  'bottom'
+);
+
+@each $alignment-type in $vertical-alignment-types {
+  .align-#{$alignment-type} {
+    text-align: #{$alignment-type};
+  }
+}
+
+
+/*------------------------------------*\
+    Margin & padding
+\*------------------------------------*/
+
+$sizes: ('none': 0, 'xs': 0.5em, 's': 0.75em, 'm': 1.375em, 'l': 2em, 'xl': 4em, '2xl': 8em);
+$sides: ("top": "t", "right": "r", "bottom": "b", "left": "l");
+$axes: (
+  h: ("left", "right"),
+  v: ("top", "bottom")
+);
+
+@each $size, $value in $sizes {
+  .mar-#{$size} {
+    margin: $value;
+  }
+  .pad-#{$size} {
+    padding: $value;
+  }
+  @each $key, $axis in $axes {
+    .mar-#{$key}-#{$size} {
+      @each $side in $axis {
+        margin-#{$side}: $value;
+      }
+    }
+    .pad-#{$key}-#{$size} {
+      @each $side in $axis {
+        padding-#{$side}: $value;
+      }
+    }
+  }
+  @each $side, $contraction in $sides {
+    .mar-#{$contraction}-#{$size} {
+      margin-#{$side}: $value;
+    }
+    .pad-#{$contraction}-#{$size} {
+      padding-#{$side}: $value;
+    }
+  }
+}
+
+/*------------------------------------*\
+    Floats
+\*------------------------------------*/
+
+$float-types: (
+  'left',
+  'right',
+  'none'
+);
+
+@each $type in $float-types {
+  .float-#{$type} {
+    float: #{$type};
+  }
+}
+
+
+/*------------------------------------*\
+    Border
+\*------------------------------------*/
+
+$border: (
+  'none'
+);
+
+@each $type in $border {
+  .bor-#{$type} {
+    border: #{$type};
+  }
+}

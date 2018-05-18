@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Rose Nichols Banner feature.
- */
-
-include_once 'rose_banner.features.inc';

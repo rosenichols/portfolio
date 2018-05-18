@@ -1,0 +1,46 @@
+uuid: 2bd82371-75b7-4ecf-bb29-a69e1167fc2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ministry_call.field_address
+    - field.field.node.ministry_call.field_details
+    - field.field.node.ministry_call.field_visits
+    - node.type.ministry_call
+  module:
+    - address
+    - entity_reference_revisions
+    - text
+    - user
+id: node.ministry_call.default
+targetEntityType: node
+bundle: ministry_call
+mode: default
+content:
+  field_address:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_details:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_visits:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

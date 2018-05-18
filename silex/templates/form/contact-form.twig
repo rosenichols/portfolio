@@ -1,0 +1,19 @@
+{{ form_start(form, {'attr': {'class': 'contact-form mar-t-xl'}}) }}
+{{ form_errors(form) }}
+
+{{ form_row(form.name) }}
+
+<div class="random-topic-generator hidden pad-m pad-v-l bg-outer-space mar-b-l mar-t-m" id="theRTG">
+  <button class="rtg-hide text-upper letter-l bg-outer-space pad-s bor-none color-key-lime" id="hideRTG">Hide</button>
+  {{ form_label(form.subject) }}
+  <div class="rtg-widget">
+    {#<span class="mar-r-s color-white">Your topic is</span>#}
+    {{ form_widget(form.subject) }}
+    <button class="text-s font-dosis letter-l text-upper pad-v-s pad-h-l color-white bg-cherry bor-none" id="generateBtn">Generate</button>
+  </div>
+</div>
+
+{{ form_row(form.message) }}
+<button id="showRTG" class="rtg-show pad-none color-cherry text-xs">Psst! Not sure what to say?</button>
+
+{{ form_end(form) }}

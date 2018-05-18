@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title ? title ~ ' | '}}Rose Nichols</title>
+    <meta charset="UTF-8" />
+
+    <meta property="og:site_name" content="Col8" />
+    <meta property="og:url" content="https://www.col8.net{{ app.request.getPathInfo() }}" />
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
+    <link href="/css/rose.css" rel="stylesheet">
+    {% block stylesheets %}
+    {% endblock %}
+    {% block header_js %}
+    {% endblock %}
+  </head>
+  <body class="{% block bodyClass %}{% endblock %}">
+
+    {% block header %}
+      <header class="site-header bg-light-cyan pad-v-2xl">
+        <div class="section-content pad-h-l">
+          <span class="text-upper font-dosis letter-l text-xl color-cherry">Rose Nichols</span>
+          <nav role="navigation" class="main-nav">
+            {#<button id="js-main-nav-toggle" class="open-nav-toggle"><span></span>Open menu</button>#}
+            <ul class="nav-list">
+              {% for title, path in menu %}
+                <li class="nav-item text-upper text-m letter-m mar-l-s">
+                  <a class="nav-item__link block pad-s color-cherry" href="/{{ path }}" role="menuitem">{{ title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </header>
+    {% endblock %}
+
+    <main class="site-body">
+      {% if app.session.getFlashBag.peekAll() | length %}
+        <div class="alerts">
+          {% for message in app.session.getFlashBag.get('message.success') %}
+            <div data-alert class="alert-box alert-type-success">{{ message|raw }}</div>
+          {% endfor %}
+          {% for message in app.session.getFlashBag.get('message.alert') %}
+            <div data-alert class="alert-box alert-type-alert">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% block content %}
+        {{ content|raw }}
+      {% endblock %}
+    </main>
+
+    {% block footer %}
+      <footer class="site-footer bg-light-cyan">
+        <div class="section-content pad-v-2xl pad-h-l">
+          <span class="color-cherry text-m">© 2018 Rose Nichols</span>
+        </div>
+      </footer>
+    {% endblock %}
+
+    {% if app.show_timer %}
+      {{ app.timer.times()|join("\n")|nl2br }}
+    {% endif %}
+
+    {% block footer_js %}
+    {% endblock %}
+  </body>
+</html>

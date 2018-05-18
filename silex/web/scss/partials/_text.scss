@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    TEXT
+    Headings, p etc
+\*------------------------------------*/
+
+h1 {
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+a {
+  .rich-text & {
+    text-decoration: none;
+    &:hover {
+      @media #{$desktop} {
+        text-decoration: underline;
+      }
+    }
+  }
+}

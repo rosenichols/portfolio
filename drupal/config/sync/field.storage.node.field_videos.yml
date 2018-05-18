@@ -1,0 +1,20 @@
+uuid: be748272-0195-41a2-bdc5-6ecfe93aa923
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_videos
+field_name: field_videos
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
