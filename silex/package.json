@@ -11,9 +11,9 @@
     "watch-css": "onchange 'web/scss' -- npm run build-css"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.4",
-    "node-sass": "^4.7.2",
-    "onchange": "^3.3.0",
-    "postcss-cli": "^4.1.1"
+    "autoprefixer": "^9.0.0",
+    "node-sass": "^4.9.3",
+    "onchange": "^4.0.0",
+    "postcss-cli": "^6.0.0"
   }
 }
