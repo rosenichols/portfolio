@@ -156,7 +156,7 @@ abstract class GeocodeFormatterBase extends FormatterBase implements ContainerFa
 
     // Attach Geofield Map Library.
     $element['#attached']['library'] = [
-      'geocoder_field/general',
+      'geocoder/general',
     ];
 
     // Get the enabled/selected plugins.

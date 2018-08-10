@@ -33,6 +33,28 @@ geocoder.settings.plugins.googlemaps:
       type: boolean
       label: 'Use SSL'
 
+geocoder.settings.plugins.googlemaps_business:
+  type: mapping
+  label: 'GoogleMaps for Business arguments'
+  mapping:
+    clientId:
+      type: string
+      label: 'The client ID'
+      description: '<a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Get a valid Google Maps Client ID</a>'
+    privateKey:
+      type: string
+      label: 'The private key'
+      description: '<a href="https://developers.google.com/maps/documentation/javascript/get-api-key#client-id">Get a valid Google Maps Private Key</a>'
+    locale:
+      type: string
+      label: 'The locale'
+    region:
+      type: string
+      label: 'The region'
+    usessl:
+      type: boolean
+      label: 'Use SSL'
+
 geocoder.settings.plugins.arcgisonline:
   type: mapping
   label: 'ArcGISOnline arguments'

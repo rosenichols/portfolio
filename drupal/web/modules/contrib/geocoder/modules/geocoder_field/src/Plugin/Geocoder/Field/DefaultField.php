@@ -158,7 +158,7 @@ class DefaultField extends PluginBase implements GeocoderFieldPluginInterface, C
 
     // Attach Geofield Map Library.
     $element['#attached']['library'] = [
-      'geocoder_field/general',
+      'geocoder/general',
     ];
 
     $invisible_state = [

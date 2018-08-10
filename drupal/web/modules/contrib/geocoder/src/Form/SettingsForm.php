@@ -124,7 +124,7 @@ class SettingsForm extends ConfigFormBase {
 
     // Attach Geofield Map Library.
     $form['#attached']['library'] = [
-      'geocoder_field/general',
+      'geocoder/general',
     ];
 
     $form['cache'] = [
