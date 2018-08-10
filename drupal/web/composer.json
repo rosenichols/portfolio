@@ -5,12 +5,7 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "composer/installers": "^1.0.24",
-        "wikimedia/composer-merge-plugin": "^1.4",
-        "drush/drush": "^9.2",
-        "solarium/solarium": "^3.8",
-        "drupal/address": "~1.0",
-        "drupal/geocoder": "^2.0@beta",
-        "phayes/geophp": "^1.2"
+        "wikimedia/composer-merge-plugin": "^1.4"
     },
     "replace": {
         "drupal/core": "^8.5"
