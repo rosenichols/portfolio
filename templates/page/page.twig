@@ -14,8 +14,7 @@
       <meta name="msapplication-TileColor" content="#cc3363">
       <meta name="theme-color" content="#cc3363">
 
-    <meta property="og:site_name" content="Col8" />
-    <meta property="og:url" content="https://www.col8.net{{ app.request.getPathInfo() }}" />
+    <meta property="og:site_name" content="Rose Nichols" />
 
     <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
     <link href="/css/rose.css" rel="stylesheet">
@@ -63,7 +62,7 @@
     {% block footer %}
       <footer class="site-footer bg-light-cyan">
         <div class="section-content pad-v-2xl pad-h-l">
-          <span class="color-cherry text-m">© 2018 Rose Nichols</span>
+          <span class="color-cherry text-s">© {{ "now"|date("Y") }} Rose Nichols</span>
         </div>
       </footer>
     {% endblock %}
