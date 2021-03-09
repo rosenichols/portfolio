@@ -1,0 +1,149 @@
+/*------------------------------------*\
+    FONTS
+\*------------------------------------*/
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/overpass/overpass-regular-webfont.woff2') format('woff2'),
+  url('../fonts/overpass/overpass-regular-webfont.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/overpass/overpass-bold-webfont.woff2') format('woff2'),
+  url('../fonts/overpass/overpass-bold-webfont.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/rubik/rubik-medium.woff2') format('woff2'),
+      url('../fonts/rubik/rubik-medium.woff') format('woff');
+  font-weight: 500;
+}
+
+
+/*------------------------------------*\
+    COLOURS
+\*------------------------------------*/
+
+$white: #ffffff;
+$off-white: #f7f5fb;
+
+$blue-grey-600: #505d68;
+$blue-grey-700: #47525c;
+$blue-grey-800: #3c4753;
+$blue-grey-850: #353d46;
+$blue-grey-900: #22292f;
+
+$yellow-400: #eef135;
+
+$green-yellow-400: #cef535;
+
+$green-400: #55b491;
+$green-600: #3c896d;
+
+$black: #11272c;
+$true-black: #000000;
+
+$colors: (
+  'white': $white,
+  'off-white': $off-white,
+  'blue-grey-600': $blue-grey-600,
+  'blue-grey-700': $blue-grey-700,
+  'blue-grey-800': $blue-grey-800,
+  'blue-grey-850': $blue-grey-850,
+  'blue-grey-900': $blue-grey-900,
+  'yellow-400': $yellow-400,
+  'green-yellow-400': $green-yellow-400,
+  'green-400': $green-400,
+  'green-600': $green-600,
+  'black': $black,
+  'true-black': $true-black,
+);
+
+
+/*------------------------------------*\
+    FONT CLASSES
+\*------------------------------------*/
+
+$font-rubik: 'Rubik', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-overpass: 'Overpass', Arial, sans-serif;
+
+$font-families: (
+  'rubik': $font-rubik,
+  'overpass': $font-overpass,
+);
+
+
+/*------------------------------------*\
+    BREAKPOINTS
+    Defines the abbreviations used in utility classes, and provides mapping to variable(s)
+\*------------------------------------*/
+
+$small-break: 420px;
+$medium-break: 650px;
+$large-break: 720px;
+$x-large-break: 1040px;
+$xx-large-break: 1400px;
+
+$small: "screen and (min-width: #{$small-break})";
+$medium: "screen and (min-width: #{$medium-break})";
+$large: "screen and (min-width: #{$large-break})";
+$x-large: "screen and (min-width: #{$x-large-break})";
+$xx-large: "screen and (min-width: #{$xx-large-break})";
+
+$breakpoints: (
+  's': $small,
+  'm': $medium,
+  'l': $large,
+  'xl': $x-large,
+  'xxl': $xx-large
+);
+
+
+/*------------------------------------*\
+    MODULAR SCALE
+    Major second (ratio: 1.125)
+    http://www.modularscale.com/?1&em&1.125
+\*------------------------------------*/
+
+$modular-scale: (
+  '-5': 0.75em,
+  '-4': 0.813em,
+  '-2': 0.875em,
+  '-1': 0.938em,
+  '0': 1em,
+  '1': 1.125em,
+  '2': 1.25em,
+  '3': 1.375em,
+  '4': 1.563em,
+  '5': 1.75em,
+  '6': 2em,
+  '7': 2.281em,
+  '8': 2.5em,
+  '10': 3.25em,
+  '12': 4em,
+  '14': 4.625em,
+  '16': 5.375em,
+  '18': 6em,
+  '24': 8em,
+  '36': 12em,
+  '48': 16em
+);
+
+
+/*------------------------------------*\
+    Letter spacing
+\*------------------------------------*/
+
+$letter-s: 0.025rem;
+$letter-m: 0.05rem;
+$letter-l: 0.075rem;
+$letter-xl: 0.2rem;
+
+
+$sides: (top, right, bottom, left);
+
+$states: (hover, focus, focus-within, active);

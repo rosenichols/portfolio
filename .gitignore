@@ -1,23 +1,23 @@
-# Ignore IDE / OS things:
-.idea
 .DS_Store
-._.DS_Store
-tmp
-
-# Ignore Sass caches
+.idea
 .sass-cache
+.vagrant
 
-# Ignore sensitive files.
-settings.php
-settings.*.php
-vendor/*
-web/css/*
-__clear_opcache_*.php
+/node_modules
+/public/css/*
 
-# Ignore Twig cache files.
-twig_cache/*
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
 
-# Misc
-npm-debug.log
-node_modules
-web/sessions
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###

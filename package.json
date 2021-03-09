@@ -1,19 +1,19 @@
 {
-  "name": "rose_nichols",
+  "name": "rosenichols",
   "version": "1.0.0",
+  "author": "Rose Nichols",
   "private": true,
   "scripts": {
-    "build": "npm run --silent build-css",
-    "build-js": "uglifyjs web/js/src/rtg.js -o web/js/compiled/rtg.js",
-    "autoprefixer": "postcss -u autoprefixer -r web/css/*.css",
-    "scss": "node-sass --output-style compressed -o web/css web/scss",
-    "build-css": "npm run scss && npm run autoprefixer",
-    "watch-css": "onchange 'web/scss' -- npm run build-css"
+    "autoprefixer": "postcss -u autoprefixer -r public/css/*.css",
+    "scss": "node-sass --output-style compressed -o public/css public/scss",
+    "build": "npm run scss && npm run autoprefixer"
   },
   "devDependencies": {
-    "autoprefixer": "^9.0.0",
-    "node-sass": "^4.9.3",
-    "onchange": "^4.0.0",
-    "postcss-cli": "^6.0.0"
+    "autoprefixer": "^9.6.0",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^6.1.3"
+  },
+  "engines": {
+    "node": ">=6 <=10"
   }
 }

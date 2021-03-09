@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rose Nichols, freelance web development</title>
+    <meta name="description" content="The website of Rose Nichols, experienced freelance web developer specialising in Drupal, and Twig templating for any platform." />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3c896d">
+    <meta name="msapplication-TileColor" content="#3c896d">
+    <meta name="theme-color" content="#353d46">
+
+    <meta property="og:site_name" content="Rose Nichols" />
+
+    <link rel="preload" href="/fonts/overpass/overpass-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/rubik/rubik-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/css/rose.css" rel="stylesheet">
+    {% block stylesheets %}
+    {% endblock %}
+    {% block header_js %}
+    {% endblock %}
+  </head>
+  <body class="font:overpass {% block bodyClass %}{% endblock %}">
+
+    {% include 'partials/svg.html.twig' %}
+
+    {% block header %}
+      <header class="site-header bg:green-yellow-zigzag pad-b:18">
+        <div class="bg:blue-grey-850 pad-v:2">
+          <div class="container wl-container mar-h:auto">
+            <svg class="fill:off-white h:10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 55">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+            </svg>
+          </div>
+        </div>
+      </header>
+    {% endblock %}
+
+    <main class="site-body">
+      {% if app.session.getFlashBag.peekAll()|length %}
+        <div class="alerts">
+          {% for message in app.session.getFlashBag.get('message.success') %}
+            <div data-alert class="alert-box alert-type-success">{{ message|raw }}</div>
+          {% endfor %}
+          {% for message in app.session.getFlashBag.get('message.alert') %}
+            <div data-alert class="alert-box alert-type-alert">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% block content %}
+        {{ content|raw }}
+      {% endblock %}
+    </main>
+
+    {% block footer %}
+      <footer class="bg:blue-grey-900">
+        <div class="container wl-container mar-h:auto pad-v:8">
+          <div class="pos:rel grid l:grid-cols:2 grid-gap:10 xl:grid-gap:12 xxl:grid-gap:18 pad-v:6 pad-t:18">
+            <svg class="w:12 pos:abs pin:t pin:l fill:blue-grey-800" viewBox="0 0 70 60" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M 10.135 38.935 C 13.274 41.49 26.778 46.965 30.136 46.965 C 30.72 46.965 31.45 46.746 32.034 46.308 C 32.764 46.673 32.764 47.184 32.983 47.987 L 32.691 48.206 L 32.764 48.425 C 31.888 48.717 31.158 48.717 30.282 48.717 C 30.136 48.717 29.771 48.717 29.625 48.863 C 29.771 49.009 31.45 49.009 31.669 49.009 L 31.377 49.374 C 31.304 49.374 31.158 49.374 31.085 49.374 C 30.501 49.374 29.844 49.52 29.333 49.52 C 28.53 49.52 27.727 49.374 26.997 49.374 C 24.004 49.374 15.172 45.505 11.887 44.191 C 11.011 43.753 10.208 43.242 9.478 42.95 C 9.04 44.045 8.748 50.031 8.894 51.199 L 8.602 51.272 L 8.602 51.564 L 8.018 51.564 L 8.018 52.002 C 7.945 52.075 7.945 52.075 7.872 52.075 C 7.799 52.075 7.58 51.929 7.507 51.929 L 7.434 52.148 C 4.806 50.907 3.784 46.746 3.784 44.118 C 3.784 42.731 4.003 41.636 4.003 40.395 C 4.003 40.249 3.93 39.957 3.857 39.884 L 3.565 39.446 C 3.346 39.373 2.543 37.913 2.543 37.548 C 2.47 37.329 2.47 37.11 2.47 36.818 C 2.47 34.628 3.93 34.409 5.317 33.679 C 6.996 26.306 10.354 19.226 12.544 11.196 C 11.084 11.342 7.288 13.021 6.193 13.824 C 5.974 13.97 5.682 13.97 5.39 13.97 C 4.295 13.97 3.857 12.291 3.857 11.342 C 3.857 10.831 4.076 10.32 3.93 9.736 C 4.003 9.59 4.295 9.517 4.368 9.517 C 4.514 9.59 4.806 9.59 4.879 9.59 C 9.551 7.546 15.61 6.232 20.574 5.94 C 20.939 5.94 21.376 5.867 21.741 5.867 C 28.311 5.867 37.655 9.298 37.655 16.963 C 37.655 23.678 23.566 33.825 10.646 37.548 C 10.427 38.497 10.135 37.913 10.135 38.935 Z M 11.668 32 C 20.209 28.861 34.005 20.102 34.005 15.43 C 34.005 12.364 28.822 9.736 22.179 9.736 C 21.304 9.736 18.676 10.028 18.019 10.466 C 17.946 10.539 17.8 10.612 17.8 10.831 C 17.216 15.576 13.931 23.313 12.69 27.839 C 12.325 29.226 11.96 30.54 11.522 31.927 L 11.668 32 Z"></path>
+              <path fill-rule="evenodd" d="M 59.47 49.71 C 59.397 50.075 59.178 50.513 59.032 50.951 L 58.959 50.659 L 58.959 50.878 C 58.959 51.024 58.886 51.17 58.886 51.462 C 58.667 52.265 57.791 53.287 57.134 54.017 L 57.207 53.725 C 56.915 53.944 56.769 54.163 56.696 54.382 C 56.769 54.09 56.769 53.944 56.842 53.725 L 56.769 53.725 C 56.55 54.017 56.404 54.163 56.258 54.382 C 56.331 54.163 56.331 53.798 56.404 53.652 C 56.039 53.798 55.82 54.09 55.674 54.382 L 55.236 55.404 L 55.09 55.404 C 54.944 55.55 54.798 55.915 54.725 56.134 L 54.287 54.163 C 53.703 53.798 55.236 44.892 56.112 41.388 C 58.156 32.628 60.054 27.956 62.171 19.124 C 62.682 16.423 63.558 12.481 62.609 11.094 C 62.536 11.021 62.463 11.021 62.39 11.021 C 61.733 11.021 60.127 12.7 59.616 13.211 C 52.973 20.876 45.454 34.964 42.461 45.841 C 41.95 47.447 41.804 49.126 41.22 50.44 L 41.001 50.513 C 40.782 50.294 40.563 50.221 40.271 50.221 C 40.052 50.221 40.125 50.586 40.125 50.732 L 39.906 50.732 C 39.76 50.659 39.614 50.659 39.395 50.586 L 39.249 50.44 L 39.03 50.513 C 39.03 50.586 38.884 50.732 38.811 50.659 C 37.862 50.586 37.205 49.126 35.891 48.98 C 35.672 48.907 35.453 48.542 35.453 48.25 C 35.526 47.885 35.964 47.593 36.183 47.228 C 38.154 38.322 39.395 32.774 41.439 24.014 C 42.023 21.095 43.702 10.145 42.023 6.933 C 41.658 6.422 41.439 6.057 40.928 6.057 C 40.855 6.057 40.855 6.057 40.782 6.057 C 40.49 6.057 40.271 6.13 40.052 6.13 C 39.906 6.13 39.833 6.13 39.76 6.057 L 39.76 5.619 C 40.052 4.889 40.855 3.867 42.388 3.867 C 42.753 3.867 43.191 3.94 43.629 4.086 C 50.345 5.984 47.571 20.292 46.038 25.693 C 47.717 20.949 56.55 7.298 62.025 7.298 C 62.244 7.517 62.536 7.517 62.828 7.517 C 67.353 7.955 68.083 15.255 67.207 19.051 C 62.171 40.22 60.054 45.038 59.47 49.71 Z"></path>
+            </svg>
+            <div class="color:off-white">
+              <span class="block mar-b:0 font:rubik text:upper text:-1 letter:xl font:700">About</span>
+              <p class="mar:none text:1 line:6">I’m an experienced freelance web developer & designer, specialising in front-end Drupal development.</p>
+            </div>
+            <div class="color:off-white">
+              <span class="block mar-b:0 font:rubik text:upper text:-1 letter:xl font:700">Contact</span>
+              <a class="transform-email text:1 color:yellow-400 text-dec:none bor-b:1 bor:transparent hover:bor:yellow-400 focus:outline:none focus:bor:yellow-400 active:color:green-yellow-400 active:bor:green-yellow-400" href="mailto:hello@rosenichols.co.uk">hello[at]rosenichols[dot]co[dot]uk</a>
+            </div>
+          </div>
+        </div>
+        <div class="container wl-container mar-h:auto pad-v:2">
+          <span class="text:-1 letter:s color:off-white">© {{ "now"|date("Y") }} Rose Nichols</span>
+        </div>
+      </footer>
+    {% endblock %}
+
+    {% block footer_js %}
+    {% endblock %}
+  </body>
+</html>

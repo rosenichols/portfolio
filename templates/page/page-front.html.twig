@@ -1,0 +1,113 @@
+{% extends "page/page.html.twig" %}
+
+{% block bodyClass %}bg:blue-grey-700{% endblock %}
+
+{% block content %}
+  <h1 class="visually-hidden">Rose Nichols, web developer</h1>
+  <article class="container wl-container mar-h:auto color:off-white pad-v:18">
+
+    <section class="mar-b:18">
+      <h2 class="text:12 xl:text:14 xxl:text:16 font:500 font:rubik mar-t:none mar-b:-8 letter:s">Hi! I'm Rose</h2>
+
+      <div class="grid l:grid-cols:5 xl:grid-cols:3 grid-gap:10 xl:grid-gap:12 xxl:grid-gap:18">
+        <div class="l:grid-column-span:3 xl:grid-column-span:2">
+          <p class="font:700 xl:font:400 text:2 lg:text:2 xl:text:3 line:5 mar-t:none">I'm a freelance front-end developer & designer with over {{ "now"|date("Y") - 2013 }} years' industry experience. I've worked with digital agencies, private businesses, and startups in a range of roles.</p>
+          <p class="font:700 xl:font:400 lg:text:1 xl:text:2 line:8 l:line:7 xl:line:6">I'm currently based in South Wales, UK. Due to the COVID-19 pandemic, I'm only able to consider fully remote positions at this time.</p>
+        </div>
+
+        <div class="l:grid-column-span:2 xl:grid-column-span:1">
+          <span class="font:rubik text:upper text:-1 letter:xl font:700">Contact details</span>
+          <ul class="pad:none">
+            {% set linkClasses = [
+              'block',
+              'pad-h:-4',
+              'xl:pad-h:0',
+              'pad-v:-2',
+              'color:off-white',
+              'bg:blue-grey-850',
+              'text-dec:none',
+              'text:1',
+              'xl:text:2',
+              'bor:2',
+              'bor:blue-grey-850',
+              'hover:bor:green-600',
+              'focus:outline:none',
+              'focus:bor:green-600',
+              'active:bor:green-400',
+            ] %}
+
+            <li class="list-style:none bor-l:8 bor:blue-grey-900 hover:bor:green-600 focus-within:bor:green-600 active:bor:green-400 mar-b:-7">
+              <a class="{{- linkClasses|join(' ') -}}" href="mailto:hello@rosenichols.co.uk">hello@rosenichols.co.uk</a>
+            </li>
+            <li class="list-style:none bor-l:8 bor:blue-grey-900 hover:bor:green-600 focus-within:bor:green-600 active:bor:green-400">
+              <a class="{{- linkClasses|join(' ') -}}" href="https://www.linkedin.com/in/rosenicholsuk">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid l:grid-cols:5 xl:grid-cols:3 grid-gap:10 xl:grid-gap:12 xxl:grid-gap:18">
+      <div class="l:order:2 l:grid-column-span:3 xl:grid-column-span:2">
+        <h2 class="mar-t:none mar-b:-4 text:7 font:rubik font:500 color:green-yellow-400">Do you need help with:</h2>
+        <ul class="pad:none font:700 xl:font:400 text:1 xl:text:3 list-style:arrow mar-b:12">
+          <li class="line:5 xl:line:4 mar-b:2 xl:mar-b:0">Production of a scaleable, fast, usable front-end interface for your application?</li>
+          <li class="line:5 xl:line:4 mar-b:2 xl:mar-b:0">Refreshing the design of an old or unmaintained Drupal site?</li>
+          <li class="line:5 xl:line:4 mar-b:2 xl:mar-b:0">Design and build of a new website for your small business?</li>
+          <li class="line:5 xl:line:4 mar-b:2 xl:mar-b:0">Translation of design files or mockups to a functioning interface?</li>
+          <li class="line:5 xl:line:4">Additional front-end capacity in your team to meet a deadline or cover an absence?</li>
+        </ul>
+
+        <h2 class="mar-t:none mar-b:-4 text:7 font:rubik font:500 color:green-yellow-400">I can help</h2>
+
+        <p class="font:700 xl:font:400 text:1 xl:text:3 line:6 xl:line:5">I've specialised in front-end development and Drupal theming for over 7 years. I have a comprehensive knowledge of modern, best-practice Drupal front-end development practices. I'm also comfortable working with PHP and certain aspects of back-end Drupal development including hooks, custom modules, and Form API.</p>
+        <p class="font:700 xl:font:400 text:1 xl:text:3 line:6 xl:line:5">I work well in a team, and bring a pragmatic approach to problem solving to reach workable solutions. I can follow instructions and communicate progress clearly.</p>
+        <p class="font:700 xl:font:400 text:1 xl:text:3 line:6 xl:line:5">Before turning freelance, I worked for several prominent digital agencies where I led the front-end development of various projects. I provided regular updates to clients and project managers, and successfully met tight deadlines.</p>
+      </div>
+
+      <div class="order:1 l:order:none l:grid-column-span:2 xl:grid-column-span:1">
+        <span class="font:rubik text:upper text:-1 letter:xl font:700">Testimonials</span>
+        <ul class="pad:none">
+          <li class="list-style:none bg:blue-grey-800 pad:1 line:6 mar-b:1">
+            {% include 'partials/testimonial.html.twig' with {
+              'body': "Rose took the lead on both the design and front-end for our platform and marketing sites, in each case taking a complex brief which underwent continual revisions and producing high quality results suited to the purpose.",
+              'attribution': {
+                'name': 'Charles Smith',
+                'position': 'CEO',
+                'company': 'Col8',
+                'url': 'https://www.col8.net',
+              },
+            } %}
+          </li>
+
+          <li class="list-style:none bg:blue-grey-800 pad:1 line:6 mar-b:1">
+            {% include 'partials/testimonial.html.twig' with {
+              'body': "I've lost count of the number of projects I've worked with Rose on now. Each time, she's taken a functional but ugly interface and made it into something absolutely world-class. She uses her experience and judgement to not just build what she's been asked to, but what's best for the project. I'm looking forward to working with her again.",
+              'attribution': {
+                'name': 'Rupert Jabelman',
+                'company': 'Jabelman Consulting',
+              },
+            } %}
+          </li>
+
+          <li class="list-style:none bg:blue-grey-800 pad:1 line:6">
+            {% include 'partials/testimonial.html.twig' with {
+              'body': "It has been a delight working with Rose. She is a conscientious, considered and knowledgeable developer, always bringing ideas to the fore and implementing them both accurately and sympathetically. Can’t wait to work on a project with her again soon.",
+              'attribution': {
+                'name': 'Glenn Barr',
+                'position': 'Scrum master',
+                'company': 'Focusrite Novation',
+                'url': 'https://novationmusic.com/en',
+              },
+            } %}
+          </li>
+        </ul>
+      </div>
+    </section>
+  </article>
+{% endblock %}
+
+{% block footer_js %}
+  {#<script src="/js/rtg.js"></script>#}
+  <script src="/js/transform-email.js"></script>
+{% endblock %}

@@ -1,0 +1,33 @@
+<blockquote>
+  <p class="mar-t:none l:text:-1">{{ body }}</p>
+  <footer class="mar-t:2 text:right">
+    <span class="block">{{ attribution.name }}</span>
+    {% if attribution.url is defined %}
+      {% set linkClasses = [
+        'text-dec:none',
+        'bor-b:1',
+        'bor:off-white',
+        'color:off-white',
+        'hover:color:yellow-400',
+        'hover:bor:yellow-400',
+        'focus:outline:none',
+        'focus:color:yellow-400',
+        'focus:bor:yellow-400',
+        'active:color:green-yellow-400',
+        'active:bor:green-yellow-400',
+      ] %}
+      <span class="block text:-1 font:italic">
+        {{ attribution.position }},
+        <a class="{{- linkClasses|join(' ') -}}" href="{{ attribution.url }}">
+          {{ attribution.company }}
+        </a>
+      </span>
+    {% else %}
+      {% if attribution.position is defined %}
+        <span class="block text:-1 font:italic">{{ attribution.position }}, {{ attribution.company }}</span>
+      {% else %}
+        <span class="block text:-1 font:italic">{{ attribution.company }}</span>
+      {% endif %}
+    {% endif %}
+  </footer>
+</blockquote>

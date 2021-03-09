@@ -1,0 +1,1284 @@
+/*------------------------------------*\
+    UTILITY
+\*------------------------------------*/
+
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+  @media #{$medium} {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  @media #{$large} {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  @media #{$x-large} {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+.wl-container {
+  max-width: 1200px;
+
+  @media #{$x-large} {
+    max-width: 1400px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.user-select\:none {
+  user-select: none;
+}
+
+.bg\:green-yellow-zigzag {
+  background-image: url("/img/green-yellow-zigzag.svg");
+  background-repeat: repeat-x;
+  background-position: -94px bottom;
+}
+
+
+/*------------------------------------*\
+    Grid row/column span
+\*------------------------------------*/
+
+$grid-span-values: (
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+);
+
+@each $grid-span-value in $grid-span-values {
+  .grid-column-span\:#{$grid-span-value} {
+    grid-column: span #{$grid-span-value};
+  }
+  .grid-row-span\:#{$grid-span-value} {
+    grid-row: span #{$grid-span-value};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $grid-span-value in $grid-span-values {
+    .#{$abbreviation}\:grid-column-span\:#{$grid-span-value} {
+      @media #{$breakpoint} {
+        grid-column: span #{$grid-span-value};
+      }
+    }
+    .#{$abbreviation}\:grid-row-span\:#{$grid-span-value} {
+      @media #{$breakpoint} {
+        grid-row: span #{$grid-span-value};
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Display
+\*------------------------------------*/
+
+$display-types: (
+  'hidden': 'none',
+  'block': 'block',
+  'none': 'none',
+  'inline-block': 'inline-block',
+  'grid': 'grid',
+  'flex': 'flex',
+);
+
+.really-hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  height: 0;
+  width: 1px;
+  word-wrap: normal;
+}
+
+@each $identifier, $display-type in $display-types {
+  .#{$identifier} {
+    display: #{$display-type};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $identifier, $display-type in $display-types {
+    .#{$abbreviation}\:#{$identifier} {
+      @media #{$breakpoint} {
+        display: #{$display-type};
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    FLEX: Direction
+\*------------------------------------*/
+
+$flex-direction-types: (
+  'row',
+  'row-reverse',
+  'column',
+  'column-reverse',
+);
+
+@each $flex-direction-type in $flex-direction-types {
+  .flex\:#{$flex-direction-type} {
+    flex-direction: #{$flex-direction-type};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $flex-direction-type in $flex-direction-types {
+    .#{$abbreviation}\:flex\:#{$flex-direction-type} {
+      @media #{$breakpoint} {
+        flex-direction: #{$flex-direction-type};
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    FLEX: Align items
+\*------------------------------------*/
+
+$flex-item-alignment-types: (
+  'start': 'flex-start',
+  'center': 'center',
+  'end': 'flex-end',
+  'stretch': 'stretch',
+);
+
+@each $identifier, $alignment-type in $flex-item-alignment-types {
+  .items\:#{$identifier} {
+    align-items: #{$alignment-type};
+  }
+
+  .self\:#{$identifier} {
+    align-self: #{$alignment-type};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $identifier, $alignment-type in $flex-item-alignment-types {
+    .#{$abbreviation}\:items\:#{$identifier} {
+      @media #{$breakpoint} {
+        align-items: #{$alignment-type};
+      }
+    }
+    .#{$abbreviation}\:self\:#{$identifier} {
+      @media #{$breakpoint} {
+        align-self: #{$alignment-type};
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    FLEX: Justify content
+\*------------------------------------*/
+
+$flex-justify-content-types: (
+  'start': 'flex-start',
+  'center': 'center',
+  'end': 'flex-end',
+  'between': 'space-between',
+  'around': 'space-around',
+  'even': 'space-evenly'
+);
+
+@each $identifier, $justify-type in $flex-justify-content-types {
+  .justify\:#{$identifier} {
+    justify-content: #{$justify-type};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $identifier, $justify-type in $flex-justify-content-types {
+    .#{$abbreviation}\:justify\:#{$identifier} {
+      @media #{$breakpoint} {
+        justify-content: #{$justify-type};
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    FLEX: Grow & Shrink
+\*------------------------------------*/
+
+.flex-grow\:1 {
+  flex-grow: 1;
+}
+
+.flex-shrink\:0 {
+  flex-shrink: 0;
+}
+
+.flex-shrink\:1 {
+  flex-shrink: 1;
+}
+
+
+/*------------------------------------*\
+    FLEX: Direction
+\*------------------------------------*/
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.xl\:flex-row {
+  @media #{$x-large} {
+    flex-direction: row;
+  }
+}
+
+
+/*------------------------------------*\
+    FLEX: Wrap
+\*------------------------------------*/
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.m\:flex-row {
+  @media #{$medium} {
+    flex-direction: row;
+  }
+}
+
+.l\:flex-row {
+  @media #{$large} {
+    flex-direction: row;
+  }
+}
+
+.l\:flex-column {
+  @media #{$large} {
+    flex-direction: column;
+  }
+}
+
+.m\:flex-wrap {
+  @media #{$medium} {
+    flex-wrap: wrap;
+  }
+}
+
+.m\:flex-nowrap {
+  @media #{$medium} {
+    flex-wrap: nowrap;
+  }
+}
+
+.l\:flex-nowrap {
+  @media #{$large} {
+    flex-wrap: nowrap;
+  }
+}
+
+
+/*------------------------------------*\
+    Font family
+\*------------------------------------*/
+
+@each $identifier, $font-family in $font-families {
+  .font\:#{$identifier} {
+    font-family: #{$font-family};
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+
+/*------------------------------------*\
+    Font weight
+\*------------------------------------*/
+
+$font-weights: (
+  300,
+  400,
+  500,
+  600,
+  700,
+);
+
+@each $font-weight in $font-weights {
+  .font\:#{$font-weight} {
+    font-weight: #{$font-weight};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $font-weight in $font-weights {
+    .#{$abbreviation}\:font\:#{$font-weight} {
+      @media #{$breakpoint} {
+        font-weight: #{$font-weight};
+      }
+    }
+  }
+}
+
+//h1, h2, h3, h4, h5, h6 {
+//  font-weight: normal;
+//  font-family: sans-serif;
+//}
+//
+//.font-bold {
+//  font-weight: normal;
+//  font-family: sans-serif;
+//}
+//
+//b, strong {
+//  font-weight: normal;
+//  font-family: sans-serif;
+//}
+
+
+/*------------------------------------*\
+    Font style
+\*------------------------------------*/
+
+.font\:italic {
+  font-style: italic;
+}
+
+
+/*------------------------------------*\
+    Text decoration
+\*------------------------------------*/
+
+.text-dec\:none {
+  text-decoration: none;
+}
+
+.text-dec\:thick-underline {
+  position: relative;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: rgba(200, 232, 224, 0.65);
+    z-index: -1;
+  }
+}
+
+
+/*------------------------------------*\
+    Text transform
+\*------------------------------------*/
+
+$text-transform: (
+  'upper': 'uppercase',
+  'lower': 'lowercase'
+);
+
+@each $identifier, $transform in $text-transform {
+  .text\:#{$identifier} {
+    text-transform: #{$transform};
+  }
+}
+
+
+/*------------------------------------*\
+    Text alignment
+\*------------------------------------*/
+
+$alignment-types: (
+  'left',
+  'center',
+  'right',
+  'justify'
+);
+
+@each $alignment-type in $alignment-types {
+  .text\:#{$alignment-type} {
+    text-align: #{$alignment-type};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $alignment-type in $alignment-types {
+    .#{$abbreviation}\:text\:#{$alignment-type} {
+      @media #{$breakpoint} {
+        text-align: #{$alignment-type};
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Text size
+\*------------------------------------*/
+
+@each $identifier, $size in $modular-scale {
+  .text\:#{$identifier} {
+    font-size: #{$size};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $identifier, $size in $modular-scale {
+    .#{$abbreviation}\:text\:#{$identifier} {
+      @media #{$breakpoint} {
+        font-size: #{$size};
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Line height
+\*------------------------------------*/
+
+$line-heights: (
+  1em,
+  1.125em,
+  1.25em,
+  1.375em,
+  1.5em,
+  1.625em,
+  1.75em,
+  1.825em,
+);
+
+@for $i from 1 through length($line-heights) {
+  .line\:#{$i} {
+    line-height: nth($line-heights, $i);
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @for $i from 1 through length($line-heights) {
+    .#{$abbreviation}\:line\:#{$i} {
+      @media #{$breakpoint} {
+        line-height: nth($line-heights, $i);
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Font color & background color
+\*------------------------------------*/
+
+@each $name, $hex in $colors {
+  .color\:#{$name} {
+    color: #{$hex};
+    transition: color 0.5s ease;
+  }
+  .bg\:#{$name} {
+    background-color: #{$hex};
+  }
+  .fill\:#{$name} {
+    fill: #{$hex};
+  }
+  .stroke\:#{$name} {
+    stroke: #{$hex};
+  }
+}
+
+@each $name, $hex in $colors {
+  .focus\:color\:#{$name}:focus {
+    @media #{$large} {
+      color: #{$hex};
+    }
+  }
+  .hover\:color\:#{$name}:hover {
+    @media #{$large} {
+      color: #{$hex};
+    }
+  }
+  .active\:color\:#{$name}:active {
+    @media #{$large} {
+      color: #{$hex};
+    }
+  }
+}
+
+.bg\:none {
+  background-color: transparent;
+}
+
+.m\:bg\:none {
+  @media #{$medium} {
+    background-color: transparent;
+  }
+}
+
+.l\:bg\:none {
+  @media #{$large} {
+    background-color: transparent;
+  }
+}
+
+.l\:bg-image\:none {
+  @media #{$large} {
+    background-image: none;
+  }
+}
+
+.xl\:bg\:none {
+  @media #{$x-large} {
+    background-color: transparent;
+  }
+}
+
+.xl\:bg-image\:none {
+  @media #{$x-large} {
+    background-image: none;
+  }
+}
+
+
+/*------------------------------------*\
+    Margin & padding
+    https://www.sassmeister.com/gist/51e6e840b996eb08fa640f8a8fa33f03
+\*------------------------------------*/
+
+$margin-sizes: (
+  'auto': auto,
+  'none': 0,
+  '-9': 0.125em,
+  '-8': 0.25em,
+  '-7': 0.375em,
+  '-6': 0.5em,
+);
+
+$margin-sizes: map_merge($margin-sizes, $modular-scale);
+
+$axes: (
+  h: ("left", "right"),
+  v: ("top", "bottom")
+);
+
+@each $size, $value in $margin-sizes {
+  .mar\:#{$size} {
+    margin: $value;
+  }
+  .pad\:#{$size} {
+    padding: $value;
+  }
+  @if ($size == 'none') {
+    .mar\:#{$size}\:force {
+      margin: $value!important;
+    }
+    .pad\:#{$size}\:force {
+      padding: $value!important;
+    }
+  }
+  @each $key, $axis in $axes {
+    .mar-#{$key}\:#{$size} {
+      @each $side in $axis {
+        margin-#{$side}: $value;
+      }
+    }
+    .pad-#{$key}\:#{$size} {
+      @each $side in $axis {
+        padding-#{$side}: $value;
+      }
+    }
+    @if ($size == 'none') {
+      .mar-#{$key}\:#{$size}\:force {
+        @each $side in $axis {
+          margin-#{$side}: $value!important;
+        }
+      }
+      .pad-#{$key}\:#{$size}\:force {
+        @each $side in $axis {
+          padding-#{$side}: $value!important;
+        }
+      }
+    }
+  }
+  @each $side in $sides {
+    .mar-#{str-slice($side, 1, 1)}\:#{$size} {
+      margin-#{$side}: $value;
+    }
+    @if ($value != 'auto' and $size != 'none') {
+      .-mar-#{str-slice($side, 1, 1)}\:#{$size} {
+        margin-#{$side}: -$value;
+      }
+    }
+    .pad-#{str-slice($side, 1, 1)}\:#{$size} {
+      padding-#{$side}: $value;
+    }
+    @if ($size == 'none') {
+      .mar-#{str-slice($side, 1, 1)}\:#{$size}\:force {
+        margin-#{$side}: $value!important;
+      }
+      .pad-#{str-slice($side, 1, 1)}\:#{$size}\:force {
+        padding-#{$side}: $value!important;
+      }
+    }
+  }
+}
+
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $size, $value in $margin-sizes {
+
+    .#{$abbreviation}\:mar\:#{$size} {
+      @media #{$breakpoint} {
+        margin: $value;
+      }
+    }
+    .#{$abbreviation}\:pad\:#{$size} {
+      @media #{$breakpoint} {
+        padding: $value;
+      }
+    }
+
+    @each $key, $axis in $axes {
+      .#{$abbreviation}\:mar-#{$key}\:#{$size} {
+        @each $side in $axis {
+          @media #{$breakpoint} {
+            margin-#{$side}: $value;
+          }
+        }
+      }
+      .#{$abbreviation}\:pad-#{$key}\:#{$size} {
+        @each $side in $axis {
+          @media #{$breakpoint} {
+            padding-#{$side}: $value;
+          }
+        }
+      }
+    }
+    @each $side in $sides {
+      .#{$abbreviation}\:mar-#{str-slice($side, 1, 1)}\:#{$size} {
+        @media #{$breakpoint} {
+          margin-#{$side}: $value;
+        }
+      }
+      .#{$abbreviation}\:pad-#{str-slice($side, 1, 1)}\:#{$size} {
+        @media #{$breakpoint} {
+          padding-#{$side}: $value;
+        }
+      }
+    }
+  }
+}
+
+
+@each $size, $value in $modular-scale {
+  @each $side in $sides {
+    .pull-#{str-slice($side, 1, 1)}-#{$size} {
+      margin-#{$side}: -$value;
+    }
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $size, $value in $modular-scale {
+    @each $side in $sides {
+      @media #{$breakpoint} {
+        .#{$abbreviation}\:pull-#{str-slice($side, 1, 1)}-#{$size} {
+          margin-#{$side}: -$value;
+        }
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Width
+\*------------------------------------*/
+
+$widths: (
+  'auto': 'auto',
+  15\%: '15%',
+  20\%: '20%',
+  23\.5\%: '23.5%',
+  25\%: '25%',
+  26\.5\%: '26.5%',
+  30\%: '30%',
+  32\%: '32%',
+  40\%: '40%',
+  43\%: '43%',
+  48\%: '48%',
+  50\%: '50%',
+  55\%: '55%',
+  60\%: '60%',
+  65\%: '65%',
+  70\%: '70%',
+  75\%: '75%',
+  'full': '100%',
+  'screen': '100vw'
+);
+
+
+.h\:full {
+  height: 100%;
+}
+
+.m\:h\:full {
+  @media #{$medium} {
+    height: 100%;
+  }
+}
+
+.l\:h\:full {
+  @media #{$large} {
+    height: 100%;
+  }
+}
+
+.xl\:h\:full {
+  @media #{$x-large} {
+    height: 100%;
+  }
+}
+
+// Order is important here!
+@each $key, $value in $widths {
+  .w\:#{$key} {
+    width: #{$value};
+  }
+  .basis\:#{$key} {
+    flex-basis: #{$value};
+  }
+  .max-w\:#{$key} {
+    max-width: #{$value};
+  }
+}
+
+// Order is important here!
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $key, $value in $widths {
+    .#{$abbreviation}\:w\:#{$key} {
+      @media #{$breakpoint} {
+        width: #{$value};
+      }
+    }
+
+    .#{$abbreviation}\:basis\:#{$key} {
+      @media #{$breakpoint} {
+        flex-basis: #{$value};
+      }
+    }
+
+    .#{$abbreviation}\:max-w\:#{$key} {
+      @media #{$breakpoint} {
+        max-width: #{$value};
+      }
+    }
+  }
+}
+
+@each $scale-index, $value in $modular-scale {
+  .w\:#{$scale-index} {
+    width: #{$value};
+  }
+  .basis\:#{$scale-index} {
+    flex-basis: #{$value};
+  }
+  .h\:#{$scale-index} {
+    height: #{$value};
+  }
+  .min-h\:#{$scale-index} {
+    min-height: #{$value};
+  }
+  .max-w\:#{$scale-index} {
+    max-width: #{$value};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $scale-index, $value in $modular-scale {
+    .#{$abbreviation}\:w\:#{$scale-index} {
+      @media #{$breakpoint} {
+        width: #{$value};
+      }
+    }
+    .#{$abbreviation}\:basis\:#{$scale-index} {
+      @media #{$breakpoint} {
+        flex-basis: #{$value};
+      }
+    }
+    .#{$abbreviation}\:h\:#{$scale-index} {
+      @media #{$breakpoint} {
+        height: #{$value};
+      }
+    }
+  }
+}
+
+.min-h\:full-viewport {
+  min-height: 100vh;
+}
+
+.h\:full {
+  height: 100%;
+}
+
+.h\:auto {
+  height: auto;
+}
+
+
+/*------------------------------------*\
+    Position
+\*------------------------------------*/
+
+$position-types: (
+  'rel': 'relative',
+  'abs': 'absolute',
+  'fixed': 'fixed',
+  'static': 'static',
+  'sticky': 'sticky',
+);
+
+@each $identifier, $position-type in $position-types {
+  .pos\:#{$identifier} {
+    position: #{$position-type};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $identifier, $position-type in $position-types {
+    .#{$abbreviation}\:pos\:#{$identifier} {
+      @media #{$breakpoint} {
+        position: #{$position-type};
+      }
+    }
+  }
+}
+
+.pin\:center {
+  left: 50%;
+}
+
+@each $scale-index, $value in $modular-scale {
+  .pin-center\:-#{$scale-index} {
+    left: 50%;
+    margin-left: -#{$value}
+  }
+}
+
+@each $side in $sides {
+  .pin\:#{str-slice($side, 1, 1)} {
+    #{$side}: 0;
+    @if $side == "left" {
+      margin-left: unset;
+    }
+  }
+  @each $scale-index, $value in $margin-sizes {
+    .pin\:#{str-slice($side, 1, 1)}\:#{$scale-index} {
+      #{$side}: $value;
+      @if $side == "left" {
+        margin-left: unset;
+      }
+    }
+  }
+  @each $scale-index, $value in $margin-sizes {
+    .-pin\:#{str-slice($side, 1, 1)}\:#{$scale-index} {
+      #{$side}: -#{$value};
+      @if $side == "left" {
+        margin-left: unset;
+      }
+    }
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $side in $sides {
+    .#{$abbreviation}\:pin\:#{str-slice($side, 1, 1)} {
+      @media #{$breakpoint} {
+        #{$side}: 0;
+        @if $side == "left" {
+          margin-left: unset;
+        }
+      }
+    }
+    @each $scale-index, $value in $margin-sizes {
+      .#{$abbreviation}\:pin\:#{str-slice($side, 1, 1)}\:#{$scale-index} {
+        @media #{$breakpoint} {
+          #{$side}: $value;
+          @if $side == "left" {
+            margin-left: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Order
+\*------------------------------------*/
+
+@for $i from 1 through 12 {
+  .order\:#{$i} {
+    order: #{$i};
+  }
+}
+
+.order\:none {
+  order: 0;
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @for $i from 1 through 12 {
+    @media #{$breakpoint} {
+      .#{$abbreviation}\:order\:#{$i} {
+        order: #{$i};
+      }
+    }
+  }
+
+  .#{$abbreviation}\:order\:none {
+    @media #{$breakpoint} {
+      order: 0;
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Border
+    .bor-collapse
+    .bor-none
+    .bor-t .bor-r .bor-b .bor-l
+    .bor-t-[width] etc
+    .bor-[color] etc
+\*------------------------------------*/
+
+.bor\:collapse {
+  border-collapse: collapse;
+}
+
+.bor\:none {
+  border: none;
+}
+
+$border-widths: (
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  8,
+);
+
+@each $width in $border-widths {
+  .bor\:#{$width} {
+    border: #{$width}px solid;
+  }
+}
+
+@each $side in $sides {
+  .bor-#{str-slice($side, 1, 1)} {
+    border-#{$side}: 1px solid;
+  }
+  @each $width in $border-widths {
+    .bor-#{str-slice($side, 1, 1)}\:#{$width} {
+      border-#{$side}: #{$width}px solid;
+    }
+  }
+}
+
+@each $color-name, $hex in $colors {
+  .bor\:#{$color-name} {
+    border-color: #{$hex};
+    transition: border-color 0.5s ease;
+  }
+}
+
+.bor\:transparent {
+  border-color: transparent;
+}
+
+@each $state in $states {
+  @each $color-name, $hex in $colors {
+    @if $state == 'hover' {
+      .#{$state}\:bor\:#{$color-name}:#{$state} {
+        @media #{$large} {
+          border-color: #{$hex};
+        }
+      }
+    }
+    @else {
+      .#{$state}\:bor\:#{$color-name}:#{$state} {
+        border-color: #{$hex};
+      }
+    }
+  }
+}
+
+a.focus\:outline\:none {
+  outline: none;
+}
+
+
+/*------------------------------------*\
+    Border-radius
+\*------------------------------------*/
+
+$border-radius: (
+  '1': '1px',
+  '2': '2px',
+  '3': '3px',
+  '8': '8px',
+  'q': '25%',
+  'half': '50%',
+  'capsule': '4em',
+);
+
+@each $identifier, $radius in $border-radius {
+  .bor-rad\:#{$identifier} {
+    border-radius: #{$radius};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $identifier, $radius in $border-radius {
+    @media #{$breakpoint} {
+      .#{$abbreviation}\:bor-rad\:#{$identifier} {
+        border-radius: #{$radius};
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Border-style
+\*------------------------------------*/
+
+$border-styles: (
+  'solid',
+  'dashed',
+  'dotted',
+);
+
+@each $border-style in $border-styles {
+  .bor\:#{$border-style} {
+    border-style: #{$border-style};
+  }
+}
+
+
+/*------------------------------------*\
+    Letter spacing
+\*------------------------------------*/
+
+$letter-spacing: (
+  's': $letter-s,
+  'm': $letter-m,
+  'l': $letter-l,
+  'xl': $letter-xl
+);
+
+@each $identifier, $size in $letter-spacing {
+  .letter\:#{$identifier} {
+    letter-spacing: #{$size};
+  }
+  .-letter\:#{$identifier} {
+    letter-spacing: -#{$size};
+  }
+}
+
+
+/*------------------------------------*\
+    List style
+\*------------------------------------*/
+
+.list-style\:none {
+  list-style: none;
+}
+
+.list-style\:arrow {
+  list-style: none;
+
+  > li {
+    position: relative;
+    padding-left: 1.75em;
+  }
+
+  > li:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0.375em;
+    left: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M 11.501 17.846 C 11.344 17.846 11.186 17.815 11.036 17.753 C 10.58 17.565 10.283 17.12 10.283 16.626 L 10.283 14.305 L 1.873 14.305 C 1.199 14.305 0.653 13.76 0.653 13.087 L 0.653 6.914 C 0.653 6.242 1.199 5.697 1.873 5.697 L 10.283 5.697 L 10.283 3.375 C 10.283 2.882 10.58 2.435 11.036 2.247 C 11.491 2.059 12.014 2.163 12.364 2.513 L 18.99 9.138 C 19.467 9.615 19.467 10.386 18.99 10.863 L 12.364 17.489 C 12.131 17.722 11.819 17.846 11.501 17.846 Z M 3.092 11.867 L 11.502 11.867 C 12.174 11.867 12.72 12.414 12.72 13.087 L 12.72 13.683 L 16.405 10.001 L 12.72 6.318 L 12.72 6.914 C 12.72 7.587 12.174 8.133 11.502 8.133 L 3.092 8.133 L 3.092 11.867 Z" style="fill: rgb(236 251 177);"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    //@media #{$large} {
+    //  top: 12px;
+    //}
+  }
+}
+
+.list-style\:tick {
+  list-style: none;
+  position: relative;
+  padding-left: 1.75em;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    top: 4px;
+    left: 0;
+    background-color: green;
+    border-radius: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><path d="M 32.315 4.132 C 32.949 3.03 32.573 1.624 31.472 0.986 C 30.369 0.35 28.962 0.727 28.326 1.831 L 13.599 27.335 L 5.36 19.738 C 4.491 18.809 3.034 18.762 2.107 19.632 C 1.178 20.5 1.131 21.958 2 22.886 L 12.528 32.597 C 13.397 33.524 14.854 33.57 15.781 32.703 C 16.063 32.437 32.315 4.132 32.315 4.132 Z"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+
+    //@media #{$large} {
+    //  top: 12px;
+    //}
+  }
+}
+
+
+/*------------------------------------*\
+    Grid columns
+\*------------------------------------*/
+
+@for $i from 1 through 12 {
+  .grid-cols\:#{$i} {
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @for $i from 1 through 12 {
+    @media #{$breakpoint} {
+      .#{$abbreviation}\:grid-cols\:#{$i} {
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Grid gap
+\*------------------------------------*/
+
+@each $size, $value in $modular-scale {
+  .grid-gap\:#{$size} {
+    grid-gap: #{$value};
+  }
+}
+
+@each $abbreviation, $breakpoint in $breakpoints {
+  @each $size, $value in $modular-scale {
+    @media #{$breakpoint} {
+      .#{$abbreviation}\:grid-gap\:#{$size} {
+        grid-gap: $value;
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    Shadow
+\*------------------------------------*/
+
+.border-shadow {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 3px 0 rgba(23, 54, 46, 0.25);
+  }
+}
+
+
+/*------------------------------------*\
+    Object-fit
+\*------------------------------------*/
+
+.cover {
+  object-fit: cover;
+}
+
+.m\:cover {
+  @media #{$medium} {
+    object-fit: cover;
+  }
+}
+
+.l\:cover {
+  @media #{$large} {
+    object-fit: cover;
+  }
+}
+
+.xl\:cover {
+  @media #{$x-large} {
+    object-fit: cover;
+  }
+}
